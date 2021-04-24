@@ -21,7 +21,7 @@ body {
 }
 
 .container {
-  width: 1920px;
+  width: 100%;
 }
 .top-header{
     height: 420px;
@@ -148,4 +148,7 @@ body {
           }
         }
       }
+}
+
+@media only screen and (min-width:1165px) and (max-width:1920px){
 }
