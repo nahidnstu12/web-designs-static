@@ -1,0 +1,114 @@
+@font-face {
+  font-family: "Novera-medium";
+  src: url("../fonts/Novera-ModernMedium.otf");
+}
+@font-face {
+  font-family: "Novera-light";
+  src: url("../fonts/Novera-ModernLight.otf");
+}
+@font-face {
+  font-family: "Novera-regular";
+  src: url("../fonts/Novera-ModernRegular.otf");
+}
+@font-face {
+  font-family: "Roxbrough-medium";
+  src: url("../fonts/RoxboroughCF-Medium.otf");
+}
+@font-face {
+  font-family: "Roxbrough-light";
+  src: url("../fonts/RoxboroughCF-Light.otf");
+}
+@font-face {
+  font-family: "Roxbrough-regular";
+  src: url("../fonts/RoxboroughCF-Regular.otf");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: #ffffff;
+  background-color: #151515;
+}
+
+.container {
+  width: 1920px;
+}
+
+.top-header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 34px;
+}
+.top-header .social-logo img {
+  padding: 15px;
+}
+.top-header .contact-info {
+  font-family: "Novera-regular";
+  font-size: 15px;
+  color: #ffffff;
+}
+
+.process {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
+  margin-left: 80px;
+  margin-top: 88px;
+}
+.process img {
+  width: 52px;
+  object-fit: contain;
+}
+.process .process-box {
+  margin: 29px 0;
+}
+.process .process-box .text-one {
+  font-family: "Roxbrough-light";
+  font-size: 72px;
+  text-align: center;
+}
+.process .process-box .text-two {
+  font-family: "Novera-regular";
+  font-size: 15px;
+  margin-top: 15px;
+  margin-bottom: 65px;
+  text-align: center;
+}
+.process .process-box .text-three {
+  font-family: "Roxbrough-light";
+  font-size: 12px;
+  text-align: center;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 375px) {
+  .container {
+    width: 375px;
+  }
+
+  .top-header .social-logo,
+.top-header .contact-info {
+    display: none;
+  }
+
+  .process {
+    margin-left: 0;
+    height: 480px;
+  }
+  .process .process-box {
+    margin-top: 75px;
+  }
+  .process .process-box .text-one {
+    font-size: 32px;
+  }
+  .process .process-box .text-three {
+    position: relative;
+    bottom: -77px;
+  }
+}
