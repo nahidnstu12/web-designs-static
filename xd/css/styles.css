@@ -68,28 +68,25 @@ body {
   font-family: "Novera-medium";
   font-size: 15px;
   margin: 27px 100px;
-  padding: 0 390px;
+  padding: 18px 39px;
   color: #747474;
 }
 
 .slider-section {
   display: flex;
 }
-.slider-section .left-img {
-  width: 650px;
-}
 .slider-section .sliders {
   position: relative;
   bottom: -16px;
+  width: 100%;
 }
 .slider-section .sliders .right-img {
-  margin-left: 50px;
-  width: 1275px;
+  margin: 0 50px;
   z-index: -1;
   transition: 0.45s;
 }
 .slider-section .sliders .right-img img {
-  width: 1271px;
+  width: 100%;
   object-fit: contain;
 }
 .slider-section .sliders button {
@@ -142,16 +139,14 @@ body {
   font-size: 15px;
   text-align: center;
   margin: 50px 301px;
-  padding: 0 224px;
+  padding: 0 30px;
 }
 
 .booking-form {
-  width: 895px;
   height: 530px;
-  margin-left: 469px;
+  margin: 0 18%;
   position: relative;
   top: -217px;
-  left: 65px;
   background: #fff;
 }
 .booking-form .text-one {
@@ -242,7 +237,7 @@ footer .footer-container-sm {
 footer .footer-container-lg {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  margin: 0 340px;
+  margin: 5px 17%;
 }
 footer .footer-container-lg .footer-logo {
   font-family: "Novera-regular";
@@ -299,7 +294,7 @@ footer .footer-container-lg .grid-four .social-icons {
   justify-content: space-around;
 }
 
-@media only screen and (max-width: 375px) {
+@media only screen and (min-width: 375px) and (max-width: 665px) {
   .container {
     width: 375px;
   }
