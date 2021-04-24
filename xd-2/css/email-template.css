@@ -49,21 +49,21 @@ body {
   width: 150px;
 }
 .top-header .text-two {
-  margin: 37px 100px;
-  padding: 0 390px;
+  margin: 37px 20%;
   font-family: "Novera-medium";
   font-size: 15px;
   text-align: center;
   margin-top: 99px;
+  color: #747474;
 }
 
 .img-body {
   position: relative;
   bottom: -51px;
+  width: 74%;
 }
 .img-body img {
-  width: 1445px;
-  height: 561px;
+  width: 100%;
   object-fit: contain;
 }
 
@@ -73,7 +73,8 @@ body {
   height: 800px;
 }
 .footer .thanku {
-  padding: 200px;
+  padding-top: 147px;
+  padding-bottom: 100px;
 }
 .footer .thanku .text-one {
   font-family: "Roxbrough-light";
@@ -81,11 +82,11 @@ body {
   text-align: center;
 }
 .footer .thanku .text-two {
-  font-family: "Novera-medium";
+  font-family: "Novera-regular";
   font-size: 15px;
   text-align: center;
-  margin: 27px 100px;
-  padding: 0 390px;
+  margin: 100px 100px;
+  padding: 0 195px;
 }
 .footer .border-line {
   border: 1px solid #91919147;
@@ -94,10 +95,13 @@ body {
   position: relative;
   top: -67px;
 }
+.footer .footer-container-sm {
+  display: none;
+}
 .footer .footer-container-lg {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  margin: 0 340px;
+  margin: 0 13%;
 }
 .footer .footer-container-lg .footer-logo {
   font-family: "Novera-regular";
@@ -155,4 +159,77 @@ body {
 }
 .footer .footer-container-lg .grid-four .social-icons img:first-child {
   margin-left: -30px;
+}
+
+@media only screen and (min-width: 375px) and (max-width: 665px) {
+  .top-header {
+    margin-bottom: 0;
+  }
+  .top-header .text-two {
+    margin: 19px 9%;
+    margin-top: 99px;
+  }
+
+  .img-body {
+    width: 100%;
+  }
+
+  .footer .thanku .text-two {
+    margin: 10px;
+    padding: 0 27px;
+    margin-top: 53px;
+  }
+  .footer .footer-container-lg {
+    display: none;
+  }
+  .footer .footer-container-sm {
+    display: block;
+    background: #151515;
+    color: #ffffff;
+    padding: 19px 40px;
+  }
+  .footer .footer-container-sm .logo {
+    margin-top: 31px;
+    margin-bottom: 11px;
+  }
+  .footer .footer-container-sm .contact-1 {
+    font-family: "Novera-medium";
+    font-size: 16px;
+    margin: 5px 0;
+    padding: 24px 0;
+  }
+  .footer .footer-container-sm .contact-2 {
+    font-family: "Novera-light";
+    font-size: 16px;
+    margin: 5px 0;
+    padding: 24px 0;
+  }
+  .footer .footer-container-sm .contact-3 {
+    font-family: "Novera-light";
+    font-size: 16px;
+    margin: 5px 0;
+    padding: 24px 0;
+  }
+  .footer .footer-container-sm .social-icons {
+    display: flex;
+    justify-content: space-around;
+    padding: 24px 0;
+    width: 50%;
+    cursor: pointer;
+  }
+  .footer .footer-container-sm .social-icons img:first-child {
+    margin-left: -33px;
+  }
+  .footer .footer-container-sm .time {
+    font-family: "Novera-regular";
+    font-size: 16px;
+    margin: 5px 0;
+    padding: 24px 0;
+  }
+  .footer .footer-container-sm .copyright {
+    font-family: "Novera-medium";
+    font-size: 16px;
+    margin: 5px 0;
+    margin-top: 36px;
+  }
 }

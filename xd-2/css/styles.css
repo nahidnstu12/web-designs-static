@@ -157,7 +157,7 @@ body {
   padding-bottom: 25px;
 }
 .booking-form form {
-  margin-left: -155px;
+  margin-left: -125px;
 }
 .booking-form form .form-group {
   display: flex;
@@ -168,7 +168,7 @@ body {
 .booking-form form .form-group .form-input input {
   border: none;
   border-bottom: 1px solid #747474;
-  width: 165%;
+  width: 136%;
   padding: 14px;
   font-size: 16px;
   outline: none;
@@ -181,7 +181,7 @@ body {
   color: #747474;
 }
 .booking-form form .form-group .form-control {
-  margin-left: 185px;
+  margin-left: 17%;
   width: 50%;
 }
 .booking-form form .form-group .form-control:last-child {
@@ -189,15 +189,15 @@ body {
 }
 .booking-form form .form-group .form-control input {
   padding: 9px;
-  width: 88%;
+  width: 78%;
 }
 .booking-form form .form-select {
   display: flex;
-  margin-left: 208px;
+  margin-left: 19%;
   flex-direction: column;
 }
 .booking-form form .form-select select {
-  width: 92%;
+  width: 87%;
   padding: 9px;
   font-size: 18px;
   outline: none;
@@ -217,10 +217,9 @@ body {
   font-size: 16px;
   border: none;
   cursor: pointer;
-  width: 120px;
-  margin-left: 538px;
-  margin-top: 27px;
-  border-radius: 5px;
+  width: 140px;
+  margin-left: 47%;
+  margin-top: 40px;
   font-family: "Novera-medium";
 }
 
@@ -298,6 +297,30 @@ footer .footer-container-lg .grid-four .social-icons {
   justify-content: space-around;
 }
 
+@media only screen and (min-width: 1700px) and (max-width: 1920px) {
+  .booking-form form {
+    margin-left: -70px;
+  }
+  .booking-form form .form-group .form-control {
+    margin-left: 21%;
+  }
+  .booking-form form .form-group .form-control:last-child {
+    margin-left: -30px;
+  }
+  .booking-form form .form-group .form-control input {
+    width: 73%;
+  }
+  .booking-form form .form-select {
+    margin-left: 22%;
+  }
+  .booking-form form .form-select select {
+    width: 85%;
+  }
+  .booking-form form .submit {
+    width: 150px;
+    margin-left: 49%;
+  }
+}
 @media only screen and (min-width: 375px) and (max-width: 665px) {
   .container {
     width: 100%;
