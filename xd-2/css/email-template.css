@@ -2,26 +2,32 @@
   font-family: "Novera-medium";
   src: url("../fonts/Novera-ModernMedium.otf");
 }
+
 @font-face {
   font-family: "Novera-light";
   src: url("../fonts/Novera-ModernLight.otf");
 }
+
 @font-face {
   font-family: "Novera-regular";
   src: url("../fonts/Novera-ModernRegular.otf");
 }
+
 @font-face {
   font-family: "Roxbrough-medium";
   src: url("../fonts/RoxboroughCF-Medium.otf");
 }
+
 @font-face {
   font-family: "Roxbrough-light";
   src: url("../fonts/RoxboroughCF-Light.otf");
 }
+
 @font-face {
   font-family: "Roxbrough-regular";
   src: url("../fonts/RoxboroughCF-Regular.otf");
 }
+
 * {
   margin: 0;
   padding: 0;
@@ -44,13 +50,15 @@ body {
   justify-content: center;
   align-items: center;
 }
+
 .top-header img {
   margin-top: -11px;
   width: 150px;
 }
+
 .top-header .text-two {
   margin: 37px 20%;
-  font-family: "Novera-medium";
+  font-family: 'Novera-medium';
   font-size: 15px;
   text-align: center;
   margin-top: 99px;
@@ -62,6 +70,7 @@ body {
   bottom: -51px;
   width: 74%;
 }
+
 .img-body img {
   width: 100%;
   object-fit: contain;
@@ -72,22 +81,26 @@ body {
   color: #ffffff;
   height: 800px;
 }
+
 .footer .thanku {
   padding-top: 147px;
   padding-bottom: 100px;
 }
+
 .footer .thanku .text-one {
-  font-family: "Roxbrough-light";
+  font-family: 'Roxbrough-light';
   font-size: 32px;
   text-align: center;
 }
+
 .footer .thanku .text-two {
-  font-family: "Novera-regular";
+  font-family: 'Novera-regular';
   font-size: 15px;
   text-align: center;
   margin: 100px 100px;
   padding: 0 195px;
 }
+
 .footer .border-line {
   border: 1px solid #91919147;
   width: 59%;
@@ -95,68 +108,85 @@ body {
   position: relative;
   top: -67px;
 }
+
 .footer .footer-container-sm {
   display: none;
 }
+
 .footer .footer-container-lg {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   margin: 0 13%;
 }
+
 .footer .footer-container-lg .footer-logo {
-  font-family: "Novera-regular";
+  font-family: 'Novera-regular';
   font-size: 12px;
   color: #fff;
 }
+
 .footer .footer-container-lg .footer-logo img {
   display: block;
   margin-bottom: 19px;
 }
+
 .footer .footer-container-lg .grid-two ul {
   list-style: none;
 }
+
 .footer .footer-container-lg .grid-two ul li {
   margin-bottom: 19px;
-  font-family: "Novera-medium";
+  font-family: 'Novera-medium';
 }
+
 .footer .footer-container-lg .grid-two ul .items-1 {
-  font-family: "Novera-medium";
+  font-family: 'Novera-medium';
   font-size: 14px;
   color: #fff;
 }
+
 .footer .footer-container-lg .grid-two ul .items-2 {
   color: #fff;
 }
+
 .footer .footer-container-lg .grid-two ul .items-3 {
-  font-family: "Novera-light";
+  font-family: 'Novera-light';
 }
+
 .footer .footer-container-lg .grid-three ul {
   list-style: none;
 }
+
 .footer .footer-container-lg .grid-three ul li {
   margin-bottom: 21px;
 }
+
 .footer .footer-container-lg .grid-three ul .items-1 {
-  font-family: "Novera-medium";
+  font-family: 'Novera-medium';
   font-size: 14px;
   color: #fff;
 }
+
 .footer .footer-container-lg .grid-three ul .items-3 {
-  font-family: "Novera-light";
+  font-family: 'Novera-light';
 }
+
 .footer .footer-container-lg .grid-four {
   width: 184px;
 }
+
 .footer .footer-container-lg .grid-four h2 {
-  font-family: "Novera-medium";
+  font-family: 'Novera-medium';
   font-size: 14px;
   color: #fff;
   margin-bottom: 21px;
 }
+
 .footer .footer-container-lg .grid-four .social-icons {
   display: flex;
   justify-content: space-around;
 }
+
 .footer .footer-container-lg .grid-four .social-icons img:first-child {
   margin-left: -30px;
 }
@@ -169,11 +199,9 @@ body {
     margin: 19px 9%;
     margin-top: 99px;
   }
-
   .img-body {
     width: 100%;
   }
-
   .footer .thanku .text-two {
     margin: 10px;
     padding: 0 27px;
@@ -193,19 +221,19 @@ body {
     margin-bottom: 11px;
   }
   .footer .footer-container-sm .contact-1 {
-    font-family: "Novera-medium";
+    font-family: 'Novera-medium';
     font-size: 16px;
     margin: 5px 0;
     padding: 24px 0;
   }
   .footer .footer-container-sm .contact-2 {
-    font-family: "Novera-light";
+    font-family: 'Novera-light';
     font-size: 16px;
     margin: 5px 0;
     padding: 24px 0;
   }
   .footer .footer-container-sm .contact-3 {
-    font-family: "Novera-light";
+    font-family: 'Novera-light';
     font-size: 16px;
     margin: 5px 0;
     padding: 24px 0;
@@ -221,13 +249,13 @@ body {
     margin-left: -33px;
   }
   .footer .footer-container-sm .time {
-    font-family: "Novera-regular";
+    font-family: 'Novera-regular';
     font-size: 16px;
     margin: 5px 0;
     padding: 24px 0;
   }
   .footer .footer-container-sm .copyright {
-    font-family: "Novera-medium";
+    font-family: 'Novera-medium';
     font-size: 16px;
     margin: 5px 0;
     margin-top: 36px;
