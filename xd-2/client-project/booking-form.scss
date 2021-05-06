@@ -35,6 +35,10 @@ a {
 }
 
 header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 99;
   .top-header {
     background: $color-7;
     color: $color-1;
@@ -60,7 +64,8 @@ header {
   .bottom-header {
     @include display-flex($justify: space-around);
     height: 83px;
-    margin-left: 55px;
+    background: $color-1;
+    // margin-left: 55px;
     border-bottom: 1px solid $color-2;
     font-family: 'Novera-medium';
     .logo img {
@@ -216,7 +221,7 @@ header {
           a {
             color: $color-6;
             font-weight: bold;
-            font-size: 1.3em;
+            font-size: 1em;
           }
           .next-btn {
             padding: 10px;
@@ -225,7 +230,7 @@ header {
             margin-right: 9%;
             background-color: transparent;
             width: 30%;
-            font-size: 1.3em;
+            font-size: 1em;
             font-weight: bold;
           }
           .submit-btn {
@@ -237,7 +242,7 @@ header {
             // background-color: transparent;
             width: 30%;
             // height: 54px;
-            font-size: 1.3em;
+            font-size: 1em;
             font-weight: bold;
           }
         }
@@ -374,8 +379,9 @@ header {
 
 @media only screen and (min-width: 360px) and (max-width: 665px) {
   header {
-    margin: 5px;
+    // margin: 5px;
     padding: 17px;
+    background-color: $color-1;
 
     .top-header,
     .bottom-header {

@@ -1,0 +1,560 @@
+@font-face {
+  font-family: "Novera-medium";
+  src: url("../fonts/Novera-ModernMedium.otf");
+}
+
+@font-face {
+  font-family: "Novera-light";
+  src: url("../fonts/Novera-ModernLight.otf");
+}
+
+@font-face {
+  font-family: "Novera-regular";
+  src: url("../fonts/Novera-ModernRegular.otf");
+}
+
+@font-face {
+  font-family: "Roxbrough-medium";
+  src: url("../fonts/RoxboroughCF-Medium.otf");
+}
+
+@font-face {
+  font-family: "Roxbrough-light";
+  src: url("../fonts/RoxboroughCF-Light.otf");
+}
+
+@font-face {
+  font-family: "Roxbrough-regular";
+  src: url("../fonts/RoxboroughCF-Regular.otf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: #0d0d0d;
+  background-color: #ffffff;
+  width: 100%;
+  font-size: 10px;
+}
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.4em;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 99;
+}
+
+header .top-header {
+  background: #0d0d0d;
+  color: #ffffff;
+  height: 2.5rem;
+  font-family: 'Novera-medium';
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+header .top-header .left-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-basis: 28%;
+  font-size: 1.5em;
+}
+
+header .top-header .left-section .social-logo img {
+  width: 20px;
+  margin: 5px;
+}
+
+header .top-header .left-section .social-logo img:first-child {
+  width: 9px;
+}
+
+header .bottom-header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 83px;
+  padding-left: 55px;
+  border-bottom: 1px solid #e9e9e9;
+  font-family: 'Novera-medium';
+  background: #ffffff;
+}
+
+header .bottom-header .logo img {
+  width: 85px;
+}
+
+header .bottom-header .nav-links {
+  display: flex;
+  justify-content: space-around;
+  flex-basis: 40%;
+}
+
+header .bottom-header .nav-links a {
+  color: #0d0d0d;
+  font-size: 1.8em;
+}
+
+header .mobile-header {
+  display: none;
+}
+
+.about-us {
+  height: 330px;
+  margin-left: 13%;
+  margin-right: 23%;
+  margin-top: 13%;
+}
+
+.about-us h3 {
+  margin-top: 9%;
+  font-size: 7.2em;
+  margin-bottom: 3%;
+  font-family: 'Roxbrough-light';
+}
+
+.about-us p {
+  font-size: 1.5em;
+  font-family: 'Novera-regular';
+}
+
+.car-container {
+  margin-top: 400px;
+  background-color: #151515;
+  height: 1760px;
+  position: relative;
+  border-bottom: 1px solid #e9e9e9;
+}
+
+.car-container .top-img {
+  position: absolute;
+  display: flex;
+  top: -13%;
+  left: 0;
+}
+
+.car-container .top-img img {
+  width: 575px;
+  height: 465px;
+  margin-right: 3%;
+}
+
+.car-container h3 {
+  position: absolute;
+  top: 20%;
+  left: 22%;
+  color: #ffffff;
+  font-size: 3.2em;
+  font-family: 'Roxbrough-light';
+}
+
+.car-container .bottom-img {
+  position: absolute;
+  top: 30%;
+  left: 15%;
+}
+
+.car-container .bottom-img img {
+  width: 100%;
+  height: 100%;
+}
+
+.car-container .bottom-img .img-container {
+  background-color: #ffffff;
+  width: 470px;
+  height: 400px;
+  padding: 4%;
+  position: absolute;
+  bottom: -30%;
+  left: -8%;
+}
+
+.car-container .bottom-img .img-container .caption {
+  font-size: 1.4em;
+  font-family: 'Novera-medium';
+  border-bottom: 1px solid #151515;
+  width: 15%;
+  padding-bottom: 19px;
+}
+
+.car-container .bottom-img .img-container .title {
+  font-size: 5.6em;
+  font-family: 'Roxbrough-light';
+  margin: 15px 0;
+}
+
+.car-container .bottom-img .img-container .more-btn {
+  font-size: 1.4em;
+  font-family: 'Novera-medium';
+  padding: 10px;
+  border: 1px solid #151515;
+  margin-right: 9%;
+  margin-top: 20px;
+  background-color: transparent;
+  width: 70%;
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+footer {
+  background-color: #151515;
+  color: #ffffff;
+  height: 400px;
+}
+
+footer .footer-container-sm {
+  display: none;
+}
+
+footer .footer-container-lg {
+  padding: 4% 0;
+}
+
+footer .footer-container-lg .top-footer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 5px 17%;
+  margin-top: 0;
+}
+
+footer .footer-container-lg .top-footer .footer-logo {
+  font-family: 'Novera-regular';
+  font-size: 1.4em;
+  color: #ffffff;
+}
+
+footer .footer-container-lg .top-footer .footer-logo img {
+  display: block;
+  margin-bottom: 19px;
+}
+
+footer .footer-container-lg .top-footer .grid-two {
+  font-size: 1.4em;
+}
+
+footer .footer-container-lg .top-footer .grid-two ul {
+  list-style: none;
+}
+
+footer .footer-container-lg .top-footer .grid-two ul li {
+  margin-bottom: 19px;
+  font-family: 'Novera-medium';
+}
+
+footer .footer-container-lg .top-footer .grid-two ul .items-1 {
+  font-family: 'Novera-medium';
+  font-size: 1.4em;
+  color: #ffffff;
+}
+
+footer .footer-container-lg .top-footer .grid-two ul .items-2 {
+  color: #ffffff;
+}
+
+footer .footer-container-lg .top-footer .grid-two ul .items-3 {
+  font-family: 'Novera-light';
+}
+
+footer .footer-container-lg .top-footer .grid-three {
+  font-size: 1.4em;
+}
+
+footer .footer-container-lg .top-footer .grid-three ul {
+  list-style: none;
+}
+
+footer .footer-container-lg .top-footer .grid-three ul li {
+  margin-bottom: 21px;
+}
+
+footer .footer-container-lg .top-footer .grid-three ul .items-1 {
+  font-family: 'Novera-medium';
+  color: #ffffff;
+}
+
+footer .footer-container-lg .top-footer .grid-three ul .items-3 {
+  font-family: 'Novera-regular';
+}
+
+footer .footer-container-lg .top-footer .grid-three ul .items-3 span {
+  font-family: 'Novera-light';
+}
+
+footer .footer-container-lg .top-footer .grid-four {
+  width: 184px;
+}
+
+footer .footer-container-lg .top-footer .grid-four h2 {
+  font-family: 'Novera-medium';
+  color: #ffffff;
+  margin-bottom: 21px;
+}
+
+footer .footer-container-lg .top-footer .grid-four .social-icons {
+  display: flex;
+  justify-content: space-around;
+}
+
+footer .footer-container-lg .top-footer .grid-four .social-icons:first-child {
+  margin-left: -21px;
+}
+
+footer .footer-container-lg .top-footer .grid-four .book-now {
+  padding: 10px;
+  border: 1px solid #ffffff;
+  margin-left: 0%;
+  margin-right: 9%;
+  background-color: transparent;
+  width: 100%;
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #ffffff;
+  margin-top: 22%;
+}
+
+footer .footer-container-lg .border {
+  border-bottom: 1px solid #e9e9e9;
+  width: 60%;
+  margin-left: 17%;
+}
+
+footer .footer-container-lg .bottom-footer {
+  margin: 3% 17%;
+  display: flex;
+  align-items: center;
+}
+
+footer .footer-container-lg .bottom-footer p {
+  font-family: 'Novera-regular';
+  font-size: 1.5em;
+}
+
+footer .footer-container-lg .bottom-footer .policy {
+  display: flex;
+  flex-basis: 100%;
+  justify-content: space-evenly;
+}
+
+footer .footer-container-lg .bottom-footer .policy-one {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+@media only screen and (min-width: 1180px) and (max-width: 1550px) {
+  .car-container .bottom-img {
+    left: 14%;
+  }
+  .car-container .bottom-img img {
+    width: 86%;
+  }
+  .footer-container-lg .border {
+    width: 63%;
+  }
+}
+
+@media only screen and (min-width: 360px) and (max-width: 665px) {
+  header {
+    padding: 17px;
+    background-color: #ffffff;
+  }
+  header .top-header,
+  header .bottom-header {
+    display: none;
+  }
+  header .mobile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header .mobile-header .logo img {
+    width: 55px;
+    margin-left: 21px;
+  }
+  header .mobile-header .contact {
+    font-size: 12px;
+    font-family: 'Novera-regular';
+    color: #919191;
+  }
+  header .mobile-header .mobile-menu {
+    width: 28px;
+    margin-right: 21px;
+  }
+  .about-us {
+    height: 720px;
+    margin: 7%;
+    margin-top: 90px;
+  }
+  .about-us h3 {
+    font-size: 3.2em;
+  }
+  .about-us p {
+    margin-top: 20px;
+    color: #919191;
+    font-size: 17px;
+  }
+  .car-container {
+    border-bottom: none;
+    height: 1300px;
+    margin-bottom: -2px;
+  }
+  .car-container .top-img {
+    flex-direction: column;
+    top: -53%;
+  }
+  .car-container .top-img img {
+    width: 100%;
+  }
+  .car-container .top-img:first-child {
+    margin: 0;
+  }
+  .car-container .top-img .top-img-2 {
+    padding: 9%;
+  }
+  .car-container h3 {
+    padding: 5%;
+    padding-right: 14%;
+    padding-left: 12%;
+    top: 26%;
+    left: 0;
+    text-align: center;
+  }
+  .car-container .bottom-img {
+    left: 0;
+    top: 50%;
+  }
+  .car-container .bottom-img img {
+    background-size: cover;
+    margin: 0;
+    height: 677px;
+  }
+  .car-container .bottom-img .img-container {
+    left: 6%;
+    bottom: 8%;
+    width: 85%;
+    height: 55%;
+  }
+  .car-container .bottom-img .caption {
+    margin: auto;
+    text-align: center;
+  }
+  .car-container .bottom-img .title {
+    margin: 40px 0 !important;
+    text-align: center;
+  }
+  .car-container .bottom-img .more-btn {
+    margin: auto;
+    margin: 2%;
+    padding: 16px;
+  }
+  .car-container .bottom-img .mbl-btn {
+    width: 86% !important;
+    margin-left: 7%;
+  }
+  footer .footer-container-lg,
+  footer .border {
+    display: none;
+  }
+  footer .footer-container-sm {
+    display: block;
+    background: #151515;
+    color: #ffffff;
+    padding: 19px 40px;
+    padding-top: 18%;
+    text-align: center;
+  }
+  footer .footer-container-sm .logo {
+    margin-top: 31px;
+    margin-bottom: 49px;
+  }
+  footer .footer-container-sm .head-title {
+    font-family: 'Novera-regular';
+    font-size: 1.2em;
+  }
+  footer .footer-container-sm .contact-1 {
+    font-family: 'Novera-medium';
+    font-size: 16px;
+    margin: 18px 0;
+    font-weight: bold;
+  }
+  footer .footer-container-sm .contact-2 {
+    font-family: 'Novera-light';
+    font-size: 16px;
+    margin: 5px 0;
+  }
+  footer .footer-container-sm .contact-3 {
+    font-family: 'Novera-light';
+    font-size: 16px;
+    margin: 18px 0;
+    margin-bottom: 49px;
+  }
+  footer .footer-container-sm .book-now {
+    padding: 18px;
+    border: 1px solid #ffffff;
+    margin-left: 0%;
+    margin-right: 9%;
+    background-color: transparent;
+    width: 100%;
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #ffffff;
+    margin-top: 14%;
+    margin-bottom: 14%;
+  }
+  footer .footer-container-sm .follow {
+    margin: 49px 0;
+  }
+  footer .footer-container-sm .social-icons {
+    display: flex;
+    justify-content: space-around;
+    cursor: pointer;
+  }
+  footer .footer-container-sm .time {
+    font-family: 'Novera-medium';
+    font-size: 16px;
+    margin: 18px 0;
+    font-weight: bold;
+  }
+  footer .footer-container-sm .time span {
+    font-family: 'Novera-regular';
+    font-weight: normal;
+  }
+  footer .footer-container-sm .policy {
+    display: flex;
+  }
+  footer .footer-container-sm .policy-one {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2%;
+    margin-right: 18%;
+  }
+  footer .footer-container-sm .policy-one a {
+    text-align: left;
+    font-family: 'Novera-medium';
+    padding: 7px 0;
+  }
+  footer .footer-container-sm .copyright {
+    font-family: 'Novera-regular';
+    font-size: 16px;
+    margin: 5px 0;
+    margin-top: 36px;
+  }
+}
+
+@media only screen and (min-width: 375px) and (max-width: 490px) {
+  .about-us {
+    height: 770px;
+  }
+}

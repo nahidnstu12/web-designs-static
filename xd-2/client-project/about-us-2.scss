@@ -1,0 +1,300 @@
+@import '../fonts';
+
+// colors
+$color-1: #ffffff;
+$color-2: #e9e9e9;
+$color-3: #919191;
+$color-4: #747474;
+$color-5: #383838;
+$color-6: #151515;
+$color-7: #0d0d0d;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: $color-7;
+  background-color: $color-1;
+  width: 100%;
+  font-size: 10px; //font-size overrides as em unit
+}
+// mixins
+@mixin display-flex($justify: center, $align: center) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+// header design
+a {
+  color: $color-1;
+  text-decoration: none;
+  font-size: 1.4em;
+}
+
+header {
+//   position: fixed;
+//   top: 0;
+//   width: 100%;
+//   z-index: 99;
+  .top-header {
+    background: $color-7;
+    // position: fixed;
+    color: $color-1;
+    height: 2.5rem;
+    font-family: 'Novera-medium';
+    @include display-flex($justify: space-around);
+    .left-section {
+      @include display-flex($justify: space-between);
+
+      flex-basis: 28%;
+      font-size: 1.5em;
+      .social-logo {
+        img {
+          width: 20px;
+          margin: 5px;
+          &:first-child {
+            width: 9px;
+          }
+        }
+      }
+    }
+  }
+  .bottom-header {
+    @include display-flex($justify: space-around);
+    height: 83px;
+    padding-left: 55px;
+    border-bottom: 1px solid $color-2;
+    font-family: 'Novera-medium';
+    background: $color-1;
+    .logo img {
+      width: 85px;
+    }
+    .nav-links {
+      display: flex;
+      justify-content: space-around;
+      flex-basis: 40%;
+      a {
+        color: $color-7;
+        font-size: 1.8em;
+      }
+    }
+  }
+  .mobile-header {
+    display: none;
+  }
+}
+
+.about-us {
+  height: 360px;
+  margin-left: 13%;
+  margin-right: 23%;
+  h3 {
+    margin-top: 9%;
+    font-size: 7.2em;
+    margin-bottom: 3%;
+    font-family: 'Roxbrough-light';
+  }
+  p {
+    font-size: 1.5em;
+    font-family: 'Novera-regular';
+  }
+}
+// .about-us {
+//   display: none;
+// }
+
+.car-container {
+  margin-top: 400px;
+  background-color: $color-6;
+  height: 1760px;
+  position: relative;
+  border-bottom: 1px solid $color-2;
+  .top-img {
+    position: absolute;
+    display: flex;
+    top: -13%;
+    left: 0;
+    img {
+      width: 575px;
+      height: 465px;
+      margin-right: 3%;
+    }
+  }
+  h3 {
+    position: absolute;
+    top: 20%;
+    left: 22%;
+    color: $color-1;
+    font-size: 3.2em;
+    font-family: 'Roxbrough-light';
+  }
+  .bottom-img {
+    position: absolute;
+    top: 30%;
+    left: 15%;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+    .img-container {
+      background-color: $color-1;
+      width: 470px;
+      height: 400px;
+      padding: 4%;
+      position: absolute;
+      bottom: -30%;
+      left: -8%;
+      .caption {
+        font-size: 1.4em;
+        font-family: 'Novera-medium';
+        border-bottom: 1px solid $color-6;
+        width: 15%;
+        padding-bottom: 19px;
+      }
+      .title {
+        font-size: 5.6em;
+        font-family: 'Roxbrough-light';
+        margin: 15px 0;
+      }
+      .more-btn {
+        font-size: 1.4em;
+        font-family: 'Novera-medium';
+        padding: 10px;
+        border: 1px solid $color-6;
+        // margin-left: -5%;
+        margin-right: 9%;
+        margin-top: 20px;
+        background-color: transparent;
+        width: 70%;
+        font-size: 1.3em;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+footer {
+  background-color: $color-6;
+  color: $color-1;
+  height: 400px;
+  .footer-container-sm {
+    display: none;
+  }
+  .footer-container-lg {
+    padding: 4% 0;
+    .top-footer {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      margin: 5px 17%;
+      margin-top: 0;
+      .footer-logo {
+        font-family: 'Novera-regular';
+        font-size: 1.4em;
+        color: $color-1;
+        img {
+          display: block;
+          margin-bottom: 19px;
+        }
+      }
+      .grid-two {
+        font-size: 1.4em;
+        ul {
+          list-style: none;
+          li {
+            margin-bottom: 19px;
+            font-family: 'Novera-medium';
+          }
+          .items-1 {
+            font-family: 'Novera-medium';
+            font-size: 1.4em;
+            color: $color-1;
+          }
+          .items-2 {
+            color: $color-1;
+          }
+          .items-3 {
+            font-family: 'Novera-light';
+          }
+        }
+      }
+      .grid-three {
+        font-size: 1.4em;
+        ul {
+          list-style: none;
+          li {
+            margin-bottom: 21px;
+          }
+          .items-1 {
+            font-family: 'Novera-medium';
+            //   font-size: 14px;
+            color: $color-1;
+          }
+
+          .items-3 {
+            font-family: 'Novera-regular';
+            span {
+              font-family: 'Novera-light';
+            }
+          }
+        }
+      }
+      .grid-four {
+        width: 184px;
+        h2 {
+          font-family: 'Novera-medium';
+          // font-size: 14px;
+          color: $color-1;
+          margin-bottom: 21px;
+        }
+        .social-icons {
+          display: flex;
+          justify-content: space-around;
+          &:first-child {
+            margin-left: -21px;
+          }
+        }
+        .book-now {
+          padding: 10px;
+          border: 1px solid $color-1;
+          margin-left: 0%;
+          margin-right: 9%;
+          background-color: transparent;
+          width: 100%;
+          font-size: 1.3em;
+          font-weight: bold;
+          color: $color-1;
+          margin-top: 22%;
+        }
+      }
+    }
+    .border {
+      border: 1px solid $color-2;
+      width: 60%;
+      margin-left: 17%;
+    }
+    .bottom-footer {
+      margin: 3% 17%;
+      display: flex;
+      align-items: center;
+      p {
+        font-family: 'Novera-regular';
+        font-size: 1.5em;
+        //    margin-right: 8%;
+      }
+      .policy {
+        display: flex;
+        flex-basis: 100%;
+        justify-content: space-evenly;
+
+        &-one {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+        }
+      }
+    }
+  }
+}

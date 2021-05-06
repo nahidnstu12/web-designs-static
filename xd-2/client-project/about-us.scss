@@ -1,0 +1,531 @@
+@import '../fonts';
+
+// colors
+$color-1: #ffffff;
+$color-2: #e9e9e9;
+$color-3: #919191;
+$color-4: #747474;
+$color-5: #383838;
+$color-6: #151515;
+$color-7: #0d0d0d;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: $color-7;
+  background-color: $color-1;
+  width: 100%;
+  font-size: 10px; //font-size overrides as em unit
+}
+// mixins
+@mixin display-flex($justify: center, $align: center) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+// header design
+a {
+  color: $color-1;
+  text-decoration: none;
+  font-size: 1.4em;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 99;
+  .top-header {
+    background: $color-7;
+    // position: fixed;
+    color: $color-1;
+    height: 2.5rem;
+    font-family: 'Novera-medium';
+    @include display-flex($justify: space-around);
+    .left-section {
+      @include display-flex($justify: space-between);
+
+      flex-basis: 28%;
+      font-size: 1.5em;
+      .social-logo {
+        img {
+          width: 20px;
+          margin: 5px;
+          &:first-child {
+            width: 9px;
+          }
+        }
+      }
+    }
+  }
+  .bottom-header {
+    @include display-flex($justify: space-around);
+    height: 83px;
+    padding-left: 55px;
+    border-bottom: 1px solid $color-2;
+    font-family: 'Novera-medium';
+    background: $color-1;
+    .logo img {
+      width: 85px;
+    }
+    .nav-links {
+      display: flex;
+      justify-content: space-around;
+      flex-basis: 40%;
+      a {
+        color: $color-7;
+        font-size: 1.8em;
+      }
+    }
+  }
+  .mobile-header {
+    display: none;
+  }
+}
+
+.about-us {
+  height: 330px;
+  margin-left: 13%;
+  margin-right: 23%;
+  margin-top: 13%;
+  h3 {
+    margin-top: 9%;
+    font-size: 7.2em;
+    margin-bottom: 3%;
+    font-family: 'Roxbrough-light';
+  }
+  p {
+    font-size: 1.5em;
+    font-family: 'Novera-regular';
+  }
+}
+// .about-us {
+//   display: none;
+// }
+
+.car-container {
+  margin-top: 400px;
+  background-color: $color-6;
+  height: 1760px;
+  position: relative;
+  border-bottom: 1px solid $color-2;
+  .top-img {
+    position: absolute;
+    display: flex;
+    top: -13%;
+    left: 0;
+    img {
+      width: 575px;
+      height: 465px;
+      margin-right: 3%;
+    }
+  }
+  h3 {
+    position: absolute;
+    top: 20%;
+    left: 22%;
+    color: $color-1;
+    font-size: 3.2em;
+    font-family: 'Roxbrough-light';
+  }
+  .bottom-img {
+    position: absolute;
+    top: 30%;
+    left: 15%;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+    .img-container {
+      background-color: $color-1;
+      width: 470px;
+      height: 400px;
+      padding: 4%;
+      position: absolute;
+      bottom: -30%;
+      left: -8%;
+      .caption {
+        font-size: 1.4em;
+        font-family: 'Novera-medium';
+        border-bottom: 1px solid $color-6;
+        width: 15%;
+        padding-bottom: 19px;
+      }
+      .title {
+        font-size: 5.6em;
+        font-family: 'Roxbrough-light';
+        margin: 15px 0;
+      }
+      .more-btn {
+        font-size: 1.4em;
+        font-family: 'Novera-medium';
+        padding: 10px;
+        border: 1px solid $color-6;
+        // margin-left: -5%;
+        margin-right: 9%;
+        margin-top: 20px;
+        background-color: transparent;
+        width: 70%;
+        font-size: 1.3em;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+footer {
+  background-color: $color-6;
+  color: $color-1;
+  height: 400px;
+  .footer-container-sm {
+    display: none;
+  }
+  .footer-container-lg {
+    padding: 4% 0;
+    .top-footer {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      margin: 5px 17%;
+      margin-top: 0;
+      .footer-logo {
+        font-family: 'Novera-regular';
+        font-size: 1.4em;
+        color: $color-1;
+        img {
+          display: block;
+          margin-bottom: 19px;
+        }
+      }
+      .grid-two {
+        font-size: 1.4em;
+        ul {
+          list-style: none;
+          li {
+            margin-bottom: 19px;
+            font-family: 'Novera-medium';
+          }
+          .items-1 {
+            font-family: 'Novera-medium';
+            font-size: 1.4em;
+            color: $color-1;
+          }
+          .items-2 {
+            color: $color-1;
+          }
+          .items-3 {
+            font-family: 'Novera-light';
+          }
+        }
+      }
+      .grid-three {
+        font-size: 1.4em;
+        ul {
+          list-style: none;
+          li {
+            margin-bottom: 21px;
+          }
+          .items-1 {
+            font-family: 'Novera-medium';
+            //   font-size: 14px;
+            color: $color-1;
+          }
+
+          .items-3 {
+            font-family: 'Novera-regular';
+            span {
+              font-family: 'Novera-light';
+            }
+          }
+        }
+      }
+      .grid-four {
+        width: 184px;
+        h2 {
+          font-family: 'Novera-medium';
+          // font-size: 14px;
+          color: $color-1;
+          margin-bottom: 21px;
+        }
+        .social-icons {
+          display: flex;
+          justify-content: space-around;
+          &:first-child {
+            margin-left: -21px;
+          }
+        }
+        .book-now {
+          padding: 10px;
+          border: 1px solid $color-1;
+          margin-left: 0%;
+          margin-right: 9%;
+          background-color: transparent;
+          width: 100%;
+          font-size: 1.3em;
+          font-weight: bold;
+          color: $color-1;
+          margin-top: 22%;
+        }
+      }
+    }
+    .border {
+      border-bottom: 1px solid $color-2;
+      width: 60%;
+      margin-left: 17%;
+    }
+    .bottom-footer {
+      margin: 3% 17%;
+      display: flex;
+      align-items: center;
+      p {
+        font-family: 'Novera-regular';
+        font-size: 1.5em;
+        //    margin-right: 8%;
+      }
+      .policy {
+        display: flex;
+        flex-basis: 100%;
+        justify-content: space-evenly;
+
+        &-one {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1680px) and (max-width: 1920px) {
+}
+@media only screen and (min-width: 1180px) and (max-width: 1550px) {
+  .car-container {
+    .bottom-img {
+      left: 14%;
+      img {
+        width: 86%;
+      }
+    }
+  }
+  .footer-container-lg {
+    .border {
+      width: 63%;
+    }
+  }
+}
+
+@media only screen and (min-width: 360px) and (max-width: 665px) {
+  header {
+    // margin: 5px;
+    padding: 17px;
+    background-color: $color-1;
+
+    .top-header,
+    .bottom-header {
+      display: none;
+    }
+    .mobile-header {
+      @include display-flex($justify: space-between);
+
+      // padding: 7px;
+      .logo img {
+        width: 55px;
+        margin-left: 21px;
+      }
+      .contact {
+        font-size: 12px;
+        font-family: 'Novera-regular';
+        color: $color-3;
+      }
+      .mobile-menu {
+        width: 28px;
+        margin-right: 21px;
+      }
+    }
+  }
+
+  .about-us {
+    height: 720px;
+    margin: 7%;
+    margin-top: 90px;
+    h3 {
+      font-size: 3.2em;
+    }
+    p {
+      margin-top: 20px;
+      color: $color-3;
+      font-size: 17px;
+    }
+  }
+  .car-container {
+    border-bottom: none;
+    height: 1300px;
+    margin-bottom: -2px;
+    .top-img {
+      flex-direction: column;
+      top: -53%;
+      img {
+        width: 100%;
+      }
+      &:first-child {
+        margin: 0;
+      }
+      .top-img-2 {
+        padding: 9%;
+      }
+    }
+    h3 {
+      padding: 5%;
+      padding-right: 14%;
+      padding-left: 12%;
+      top: 26%;
+      left: 0;
+      text-align: center;
+    }
+    .bottom-img {
+      //   background-position: ;
+      left: 0;
+      top: 50%;
+
+      img {
+        background-size: cover;
+        // margin-top: 15%;
+        margin: 0;
+        height: 677px;
+      }
+      .img-container {
+        // display: none;
+        left: 6%;
+        bottom: 8%;
+        width: 85%;
+        height: 55%;
+      }
+      .caption {
+        // width: 100%;
+        margin: auto;
+        text-align: center;
+      }
+      .title {
+        margin: 40px 0 !important;
+        text-align: center;
+      }
+      .more-btn {
+        margin: auto;
+        margin: 2%;
+
+        padding: 16px;
+      }
+      .mbl-btn {
+        width: 86% !important;
+        margin-left: 7%;
+      }
+    }
+  }
+  footer {
+    .footer-container-lg,
+    .border {
+      display: none;
+    }
+    .footer-container-sm {
+      display: block;
+      background: #151515;
+      color: #ffffff;
+      padding: 19px 40px;
+      padding-top: 18%;
+      text-align: center;
+
+      .logo {
+        margin-top: 31px;
+        margin-bottom: 49px;
+      }
+      .head-title {
+        font-family: 'Novera-regular';
+        font-size: 1.2em;
+      }
+      .contact-1 {
+        font-family: 'Novera-medium';
+        font-size: 16px;
+        margin: 18px 0;
+        font-weight: bold;
+        // padding: 24px 0;
+      }
+      .contact-2 {
+        font-family: 'Novera-light';
+        font-size: 16px;
+        margin: 5px 0;
+        // padding: 24px 0;
+      }
+      .contact-3 {
+        font-family: 'Novera-light';
+        font-size: 16px;
+        margin: 18px 0;
+        margin-bottom: 49px;
+        // padding: 24px 0;
+      }
+      .book-now {
+        padding: 18px;
+        border: 1px solid $color-1;
+        margin-left: 0%;
+        margin-right: 9%;
+        background-color: transparent;
+        width: 100%;
+        font-size: 1.3em;
+        font-weight: bold;
+        color: $color-1;
+        margin-top: 14%;
+        margin-bottom: 14%;
+      }
+      .follow {
+        margin: 49px 0;
+      }
+      .social-icons {
+        display: flex;
+        justify-content: space-around;
+        // padding: 24px 0;
+        // width: 50%;
+        cursor: pointer;
+      }
+      .time {
+        font-family: 'Novera-medium';
+        font-size: 16px;
+        margin: 18px 0;
+        font-weight: bold;
+        // padding: 24px 0;
+        span {
+          font-family: 'Novera-regular';
+          font-weight: normal;
+        }
+      }
+      .policy {
+        display: flex;
+        &-one {
+          display: flex;
+          flex-direction: column;
+          margin-top: 2%;
+          margin-right: 18%;
+          a {
+            text-align: left;
+            font-family: 'Novera-medium';
+            padding: 7px 0;
+          }
+        }
+      }
+      .copyright {
+        font-family: 'Novera-regular';
+        font-size: 16px;
+        margin: 5px 0;
+        margin-top: 36px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 375px) and (max-width: 490px) {
+  .about-us {
+    height: 770px;
+  }
+}
