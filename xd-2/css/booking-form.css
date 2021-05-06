@@ -191,7 +191,7 @@ header .mobile-header {
 }
 
 .reservation-form-container form .form-group .form-input .long-placeholder {
-  width: 65%;
+  width: 58%;
 }
 
 .reservation-form-container form .form-group .form-input label {
@@ -205,7 +205,7 @@ header .mobile-header {
 
 .reservation-form-container form .form-group .form-control input {
   padding: 9px;
-  width: 88%;
+  width: 90%;
 }
 
 .reservation-form-container form .form-group .form-control .city-mobile {
@@ -231,10 +231,15 @@ header .mobile-header {
   position: relative;
   margin-right: 25px;
   padding: 9px;
+  font-size: 16px;
 }
 
 .reservation-form-container form .form-system a:last-child {
   color: #919191;
+}
+
+.reservation-form-container form .form-system .city-mobile {
+  display: none;
 }
 
 .reservation-form-container form .info {
@@ -250,12 +255,12 @@ header .mobile-header {
   justify-content: space-between;
   align-items: center;
   font-family: 'Novera-regular';
-  font-size: 16px;
 }
 
 .reservation-form-container form .submit a {
   color: #151515;
   font-weight: bold;
+  font-size: 1.3em;
 }
 
 .reservation-form-container form .submit .next-btn {
@@ -265,7 +270,7 @@ header .mobile-header {
   margin-right: 9%;
   background-color: transparent;
   width: 30%;
-  font-size: 18px;
+  font-size: 1.3em;
   font-weight: bold;
 }
 
@@ -276,7 +281,7 @@ header .mobile-header {
   border: 1px solid #151515;
   margin-left: -5%;
   width: 30%;
-  font-size: 18px;
+  font-size: 1.3em;
   font-weight: bold;
 }
 
@@ -466,12 +471,14 @@ header .mobile-header {
   }
   .reservation-form-container .subtitle {
     font-size: 17px;
+    margin-left: 9px;
   }
   .reservation-form-container .subtitle-2 {
     display: block;
     font-size: 17px;
     color: #919191;
     margin-top: -4%;
+    margin-left: 9px;
   }
   .reservation-form-container form .form-group .form-input {
     flex-direction: column;
@@ -497,17 +504,31 @@ header .mobile-header {
     width: 100%;
     margin-bottom: 20px;
   }
-  .reservation-form-container form .form-group .form-control .city {
+  .reservation-form-container form .form-group .form-control label {
+    margin-bottom: 0;
+    margin-right: 10%;
+  }
+  .reservation-form-container form .form-system {
+    display: flex;
+    margin-left: -13px;
+  }
+  .reservation-form-container form .form-system .city-mobile {
+    display: block;
     border: none;
     border-bottom: 1px solid #747474;
-    width: 39%;
+    width: 43%;
     padding: 14px;
     font-size: 16px;
     outline: none;
     margin-left: 10px;
   }
+  .reservation-form-container form .form-system a {
+    font-size: 14px;
+    margin-right: 17%;
+    margin-left: 2%;
+  }
   .reservation-form-container form .info {
-    margin-right: 3%;
+    margin-right: 6%;
   }
   .reservation-form-container form .submit {
     margin: 20px 0;
@@ -515,20 +536,21 @@ header .mobile-header {
   }
   .reservation-form-container form .submit .next-btn {
     margin: 0;
-    margin-left: -30px;
+    margin-left: -12%;
     order: 1;
     width: 90%;
-    font-size: 16px;
+    text-align: center;
   }
   .reservation-form-container form .submit .submit-btn {
     width: 90%;
-    margin-left: -30px;
+    margin-left: -12%;
+    text-align: center;
   }
   .reservation-form-container form .submit a {
     margin-top: 21px;
     order: 2;
     text-align: center;
-    margin-left: -4%;
+    margin-left: -7%;
   }
   .reservation-form .overview {
     margin-top: 2%;
@@ -543,6 +565,7 @@ header .mobile-header {
   }
   .reservation-form .overview img {
     width: 100%;
+    padding-right: 6%;
   }
   .reservation-form .overview .info {
     width: 70%;

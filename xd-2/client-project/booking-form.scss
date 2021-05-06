@@ -154,7 +154,7 @@ header {
               width: 35%;
             }
             .long-placeholder {
-              width: 65%;
+              width: 58%;
             }
 
             label {
@@ -169,7 +169,7 @@ header {
 
             input {
               padding: 9px;
-              width: 88%;
+              width: 90%;
             }
             .city-mobile {
               display: none;
@@ -193,9 +193,13 @@ header {
             position: relative;
             margin-right: 25px;
             padding: 9px;
+            font-size: 16px;
             &:last-child {
               color: $color-3;
             }
+          }
+          .city-mobile {
+            display: none;
           }
         }
         .info {
@@ -208,10 +212,11 @@ header {
           margin-bottom: 0;
           @include display-flex($justify: space-between);
           font-family: 'Novera-regular';
-          font-size: 16px;
+        //   font-size: 1.6em;
           a {
             color: $color-6;
             font-weight: bold;
+            font-size: 1.3em;
           }
           .next-btn {
             padding: 10px;
@@ -220,7 +225,7 @@ header {
             margin-right: 9%;
             background-color: transparent;
             width: 30%;
-            font-size: 18px;
+            font-size: 1.3em;
             font-weight: bold;
           }
           .submit-btn {
@@ -232,7 +237,7 @@ header {
             // background-color: transparent;
             width: 30%;
             // height: 54px;
-            font-size: 18px;
+            font-size: 1.3em;
             font-weight: bold;
           }
         }
@@ -420,12 +425,14 @@ header {
         }
         .subtitle {
           font-size: 17px;
+          margin-left: 9px;
         }
         .subtitle-2 {
           display: block;
           font-size: 17px;
           color: $color-3;
           margin-top: -4%;
+          margin-left: 9px;
         }
         form {
           .form-group {
@@ -450,45 +457,64 @@ header {
               .city {
                 display: none;
               }
+             
             }
 
             .form-control {
               width: 100%;
               margin-bottom: 20px;
+              label{
+                  margin-bottom: 0;
+                  margin-right: 10%;
+              }
 
-              .city {
+              
+            }
+          }
+          .form-system{
+              display: flex;
+              margin-left: -13px;
+            .city-mobile {
+                display: block;
                 border: none;
                 border-bottom: 1px solid #747474;
-                width: 39%;
+                width: 43%;
                 padding: 14px;
                 font-size: 16px;
                 outline: none;
                 margin-left: 10px;
               }
-            }
+              a{
+                  font-size: 14px;
+                  margin-right: 17%;
+                  margin-left: 2%;
+              }
           }
           .info {
-            margin-right: 3%;
+            margin-right: 6%;
           }
           .submit {
             margin: 20px 0;
             flex-direction: column;
             .next-btn {
               margin: 0;
-              margin-left: -30px;
+              margin-left: -12%;
               order: 1;
               width: 90%;
-              font-size: 16px;
+              text-align: center;
+            //   font-size: 16px;
             }
             .submit-btn {
               width: 90%;
-              margin-left: -30px;
+              margin-left:  -12%;
+              text-align: center;
             }
             a {
               margin-top: 21px;
               order: 2;
               text-align: center;
-              margin-left: -4%;
+              margin-left: -7%;
+              
             }
           }
         }
@@ -506,6 +532,7 @@ header {
         }
         img {
           width: 100%;
+          padding-right: 6%;
         }
         .info {
           width: 70%;
