@@ -1,0 +1,249 @@
+@import '../fonts';
+
+// colors
+$color-1: #ffffff;
+$color-2: #e9e9e9;
+$color-3: #919191;
+$color-4: #747474;
+$color-5: #383838;
+$color-6: #151515;
+$color-7: #0d0d0d;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: $color-7;
+  background-color: $color-1;
+  width: 100%;
+  font-size: 10px; //font-size overrides as em unit
+}
+// mixins
+@mixin display-flex($justify: center, $align: center) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+@mixin font-style($font: 'Novera-regular', $size: 1.4em) {
+  font-family: $font;
+  font-size: $size;
+}
+%button {
+  @include font-style($font: 'Novera-bold');
+  padding: 13px;
+  border: 1px solid $color-6;
+  // margin-left: -5%;
+
+  margin-top: 20px;
+
+  font-weight: bold;
+}
+.white-btn {
+  @extend %button;
+  width: 100%;
+  background-color: $color-1;
+  color: $color-6;
+}
+.black-btn {
+  @extend %button;
+  width: 100%;
+  background-color: $color-6;
+  color: $color-1;
+  border: 1px solid $color-1;
+}
+// header design
+a {
+  color: $color-1;
+  text-decoration: none;
+  font-size: 1.4em;
+}
+
+header {
+  position: fixed;
+  // top: 0;
+  top: 8px;
+  width: 100%;
+  z-index: 99;
+  .top-header {
+    background: $color-7;
+    // position: fixed;
+    color: $color-1;
+    height: 2.5rem;
+    font-family: 'Novera-medium';
+    @include display-flex($justify: space-around);
+    .left-section {
+      @include display-flex($justify: space-between);
+
+      flex-basis: 28%;
+      font-size: 1.5em;
+      .social-logo {
+        img {
+          width: 20px;
+          margin: 5px;
+          &:first-child {
+            width: 9px;
+          }
+        }
+      }
+    }
+  }
+  .bottom-header {
+    @include display-flex($justify: space-around);
+    height: 83px;
+    padding-left: 55px;
+    border-bottom: 1px solid $color-2;
+    font-family: 'Novera-medium';
+    background: $color-1;
+    .logo img {
+      width: 85px;
+    }
+    .nav-links {
+      display: flex;
+      justify-content: space-around;
+      flex-basis: 40%;
+      a {
+        color: $color-7;
+        font-size: 1.8em;
+      }
+    }
+  }
+  .mobile-header {
+    display: none;
+  }
+}
+
+.container {
+  margin: 122px 0;
+  margin-bottom: 0;
+  background-color: $color-6;
+  color: $color-1;
+  // height: 990px;
+  display: grid;
+
+  grid-template-rows: 4.94fr 1fr;
+  grid-template-columns: 1fr 1.56fr;
+
+  &-left {
+    @include display-flex();
+    .info {
+      h3 {
+        @include font-style($font: 'Roxbrough-light', $size: 5.6em);
+      }
+      .text-1 {
+        padding: 12px;
+        border-bottom: 1px solid $color-2;
+        width: 38%;
+        margin-bottom: 25px;
+      }
+      p {
+        @include font-style($size: 1.5em);
+        margin: 20px 0 50px 0;
+      }
+      //  .white-btn{
+
+      //  }
+    }
+  }
+  &-right {
+    margin-right: -2%;
+    img {
+      width: 100%;
+      // height: 400px;
+    }
+  }
+  &-bottom {
+    grid-column: 1/3;
+    background-color: $color-7;
+    .info {
+      @include display-flex($justify: space-evenly);
+
+      margin-top: 29px;
+      p {
+        @include font-style($font: 'Novera-medium', $size: 1.5em);
+        margin-top: 20px;
+        a {
+          text-decoration: underline;
+          @include font-style($font: 'Novera-medium', $size: 1em);
+        }
+      }
+      .group {
+        display: flex;
+        width: 25%;
+        .white-btn {
+          margin-right: 15px;
+        }
+      }
+    }
+  }
+}
+
+// footer,header{
+//   display: none;
+// }
+
+@media only screen and (min-width: 1680px) and (max-width: 1920px) {
+}
+
+@media only screen and (min-width: 360px) and (max-width: 665px) {
+  header {
+    // margin: 5px;
+    padding: 17px;
+    background-color: $color-1;
+
+    .top-header,
+    .bottom-header {
+      display: none;
+    }
+    .mobile-header {
+      @include display-flex($justify: space-between);
+
+      // padding: 7px;
+      .logo img {
+        width: 55px;
+        margin-left: 21px;
+      }
+      .contact {
+        font-size: 12px;
+        font-family: 'Novera-regular';
+        color: $color-3;
+      }
+      .mobile-menu {
+        width: 28px;
+        margin-right: 21px;
+      }
+    }
+  }
+  .container {
+    margin-top: 90px;
+    grid-template-rows: 1.6fr 2.1fr 1fr;
+    grid-template-columns: 1fr;
+    &-left {
+      grid-row: 2/3;
+      justify-content: space-between;
+      margin-left: 50px;
+    }
+    &-rigth {
+      grid-row: 1/2;
+    }
+    &-bottom {
+      position: fixed;
+      bottom: 0;
+      top: 65%;
+      width: 98%;
+      .info {
+        flex-direction: column;
+        margin-left: 50px;
+        .group {
+          width: 100%;
+          margin-top: 20px;
+          .black-btn {
+            margin-right: 50px;
+          }
+        }
+      }
+    }
+  }
+}

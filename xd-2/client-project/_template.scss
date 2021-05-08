@@ -27,6 +27,33 @@ body {
   justify-content: $justify;
   align-items: $align;
 }
+@mixin font-style($font:'Novera-regular',$size:1.4em) {
+  font-family: $font;
+  font-size: $size;
+}
+%button {
+  @include font-style($font: 'Novera-bold');
+  padding: 13px;
+  border: 1px solid $color-6;
+  // margin-left: -5%;
+
+  margin-top: 20px;
+
+  font-weight: bold;
+}
+.white-btn {
+  @extend %button;
+  width: 100%;
+  background-color: $color-1;
+  color: $color-6;
+}
+.black-btn {
+  @extend %button;
+  width: 100%;
+  background-color: $color-6;
+  color: $color-1;
+  border: 1px solid $color-1;
+}
 // header design
 a {
   color: $color-1;
