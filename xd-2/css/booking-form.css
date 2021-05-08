@@ -4,6 +4,16 @@
 }
 
 @font-face {
+  font-family: "Novera-bold";
+  src: url("../fonts/Novera-ModernBold.otf");
+}
+
+@font-face {
+  font-family: "Novera-xbold";
+  src: url("../fonts/Novera-ModernExtraBold.otf");
+}
+
+@font-face {
   font-family: "Novera-light";
   src: url("../fonts/Novera-ModernLight.otf");
 }
