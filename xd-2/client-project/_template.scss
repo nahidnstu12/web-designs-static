@@ -254,7 +254,7 @@ footer{
     // margin: 5px;
     padding: 17px;
     background-color: $color-1;
-
+    border-bottom: 1px solid #9191914a;
     .top-header,
     .bottom-header {
       display: none;
@@ -360,7 +360,7 @@ footer{
           display: flex;
           flex-direction: column;
           margin-top: 2%;
-          margin-right: 18%;
+          margin-right: 38%;
           a {
             text-align: left;
             font-family: 'Novera-medium';

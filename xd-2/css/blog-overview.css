@@ -349,6 +349,7 @@ footer .footer-container-lg .bottom-footer .policy-one {
   header {
     padding: 17px;
     background-color: #ffffff;
+    border-bottom: 1px solid #9191914a;
   }
   header .top-header,
   header .bottom-header {
@@ -462,7 +463,7 @@ footer .footer-container-lg .bottom-footer .policy-one {
     display: flex;
     flex-direction: column;
     margin-top: 2%;
-    margin-right: 18%;
+    margin-right: 38%;
   }
   footer .footer-container-sm .policy-one a {
     text-align: left;

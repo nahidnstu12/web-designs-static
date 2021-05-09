@@ -439,6 +439,7 @@ header .mobile-header {
   header {
     padding: 17px;
     background-color: #ffffff;
+    border-bottom: 1px solid #9191914a;
   }
   header .top-header,
   header .bottom-header {

@@ -88,7 +88,7 @@ header {
 }
 
 .about-us {
-  height: 330px;
+  // height: 330px;
   margin-left: 13%;
   margin-right: 23%;
   margin-top: 13%;
@@ -325,6 +325,7 @@ footer {
     // margin: 5px;
     padding: 17px;
     background-color: $color-1;
+    border-bottom: 1px solid #9191914a;
 
     .top-header,
     .bottom-header {
@@ -351,9 +352,10 @@ footer {
   }
 
   .about-us {
-    height: 720px;
-    margin: 7%;
-    margin-top: 90px;
+    margin-top: 18%;
+    // height: 380px;
+    // margin: 7%;
+    // margin-top: 90px;
     h3 {
       font-size: 3.2em;
     }
@@ -369,15 +371,18 @@ footer {
     margin-bottom: -2px;
     .top-img {
       flex-direction: column;
-      top: -53%;
+      top: -26%;
       img {
         width: 100%;
+        height: 234px;
+        object-fit: cover;
       }
       &:first-child {
         margin: 0;
       }
       .top-img-2 {
         padding: 9%;
+        height: 300px;
       }
     }
     h3 {
@@ -508,7 +513,7 @@ footer {
           display: flex;
           flex-direction: column;
           margin-top: 2%;
-          margin-right: 18%;
+          margin-right: 38%;
           a {
             text-align: left;
             font-family: 'Novera-medium';
@@ -528,6 +533,6 @@ footer {
 
 @media only screen and (min-width: 375px) and (max-width: 490px) {
   .about-us {
-    height: 770px;
+    // height: 430px;
   }
 }
