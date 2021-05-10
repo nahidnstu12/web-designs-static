@@ -27,6 +27,27 @@ body {
   justify-content: $justify;
   align-items: $align;
 }
+@mixin font-style($font: 'Novera-regular', $size: 1.4em) {
+  font-family: $font;
+  font-size: $size;
+}
+%button {
+  @include font-style($font: 'Novera-bold');
+  padding: 13px;
+  border: 1px solid $color-6;
+  // margin-left: -5%;
+
+  margin-top: 20px;
+
+  font-weight: bold;
+}
+.black-btn {
+  @extend %button;
+  width: 100%;
+  background-color: $color-6;
+  color: $color-1;
+  border: 1px solid $color-1;
+}
 // header design
 a {
   color: $color-1;
@@ -87,8 +108,76 @@ header {
   }
 }
 
-section{
-  margin: 150px;
+.container {
+  margin-top: 190px;
+  margin-bottom: 7%;
+  margin-left: 16%;
+  &-top {
+    margin-bottom: 50px;
+    h3 {
+      @include font-style($font: 'Roxbrough-light', $size: 5.6em);
+    }
+    p {
+      @include font-style($size: 1.5em);
+      color: $color-3;
+      padding-right: 60%;
+      margin-top: 30px;
+    }
+  }
+  &-body {
+    display: grid;
+    grid-template: repeat(2, 1fr) / repeat(3, 1fr);
+    grid-gap: 3.5em;
+    margin-right: 150px;
+    margin-bottom: 5%;
+    &-service {
+      padding: 10px 0;
+      h3 {
+        @include font-style($font: 'Novera-medium', $size: 1.9em);
+      }
+      p {
+        @include font-style($size: 1.5em);
+        color: $color-3;
+        margin-top: 22px;
+      }
+    }
+  }
+  &-bottom {
+    margin-top: 50px;
+    margin-left: 12%;
+    margin-right: 0;
+    position: relative;
+
+    img {
+      width: 100%;
+    }
+    .info {
+      position: absolute;
+      top: 9%;
+      left: -15%;
+      @include display-flex($align: flex-start);
+      flex-direction: column;
+      width: 40%;
+      height: 82%;
+      background-color: $color-6;
+      color: $color-1;
+      padding-left: 10%;
+
+      h5 {
+        @include font-style($font: 'Novera-medium');
+        text-align: left;
+        border-bottom: 1px solid $color-1;
+        padding-bottom: 27px;
+      }
+      h3 {
+        @include font-style($font: 'Roxbrough-light', $size: 5.6em);
+        padding: 25px 0;
+      }
+      .black-btn {
+        width: 70%;
+      }
+    }
+  }
 }
 
 footer {
@@ -215,9 +304,6 @@ footer {
     }
   }
 }
-footer{
-  display: none;
-}
 
 @media only screen and (min-width: 1680px) and (max-width: 1920px) {
 }
@@ -249,6 +335,54 @@ footer{
       .mobile-menu {
         width: 28px;
         margin-right: 21px;
+      }
+    }
+  }
+
+  .container{
+    margin-top: 90px;
+    margin-left: 6%;
+    &-top{
+      h3{
+        font-size: 3.2em;
+      }
+      p{
+        font-size: 1.7em;
+        padding-right: 4%;
+      }
+    }
+    &-body{
+      grid-template: repeat(6,1fr) / 1fr;
+      grid-gap: 2em;
+      margin-right: 6%;
+      h3{
+        font-size: 1.7em;
+      }
+      p{
+        font-size: 1.7em;
+        // padding-right: 2%;
+      }
+    }
+    &-bottom{
+      margin: 0;
+      margin-left: -6%;
+      img{
+        height: 677px;
+        object-fit: cover;
+
+      }
+      .info{
+        left: 5%;
+        width: 90%;
+        height: 65%;
+        top: 18%;
+        align-items: center;
+        padding-left: 0;
+       
+        h3{
+          font-size: 3.2em;
+        }
+        
       }
     }
   }

@@ -51,6 +51,28 @@ body {
   font-size: 10px;
 }
 
+.white-btn, .black-btn {
+  font-family: "Novera-bold";
+  font-size: 1.4em;
+  padding: 13px;
+  border: 1px solid #151515;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.white-btn {
+  width: 100%;
+  background-color: #ffffff;
+  color: #151515;
+}
+
+.black-btn {
+  width: 100%;
+  background-color: #151515;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+}
+
 a {
   color: #ffffff;
   text-decoration: none;
@@ -121,14 +143,148 @@ header .mobile-header {
   display: none;
 }
 
-section {
-  margin: 150px;
+.container {
+  margin-top: 190px;
+  margin-left: 16%;
+}
+
+.container-top {
+  margin-bottom: 5%;
+}
+
+.container-top h3 {
+  font-family: "Roxbrough-light";
+  font-size: 5.6em;
+}
+
+.container-top p {
+  font-family: "Novera-regular";
+  font-size: 2.8em;
+  color: #919191;
+}
+
+.container-body {
+  display: grid;
+  grid-template: 130%/repeat(2, 1fr);
+}
+
+.container-body-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.container-body-left .block {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  margin-bottom: 20%;
+  padding-top: 10%;
+  margin-left: 20%;
+}
+
+.container-body-left .block-1 {
+  display: flex;
+}
+
+.container-body-left .block-1-1 {
+  padding: 21px 0;
+  margin-right: 10%;
+  width: 100%;
+}
+
+.container-body-left .block-1-1 p {
+  font-family: "Novera-medium";
+  font-size: 1.4em;
+  color: #919191;
+  padding-bottom: 9px;
+}
+
+.container-body-left .block-1-1 h4 {
+  font-family: "Novera-xbold";
+  font-size: 2.2em;
+}
+
+.container-body-left .block-1-1 .text-one {
+  font-family: 'Novera-regular';
+  font-size: 1.9em;
+}
+
+.container-body-left .block-1-1 .direction {
+  font-family: "Novera-bold";
+  font-size: 1.4em;
+  text-decoration: underline;
+  padding-top: 19px;
+}
+
+.container-body-left .block-1-1 .social-icons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.container-body-left .contact-form {
+  width: 100%;
+  height: 35%;
+  color: #ffffff;
+  background-color: #151515;
+  padding: 4%;
+  position: relative;
+  left: 16%;
+  font-family: 'Novera-regular';
+}
+
+.container-body-left .contact-form-container .form-group {
+  display: flex;
+  margin: 9px;
+  justify-content: space-evenly;
+  padding: 8px;
+}
+
+.container-body-left .contact-form-container .form-group input {
+  border: none;
+  border-bottom: 1px solid #ffffff;
+  width: 46%;
+  padding: 14px;
+  font-size: 16px;
+  outline: none;
+  background-color: transparent;
+  color: #ffffff;
+}
+
+.container-body-left .contact-form-container .form-area {
+  display: flex;
+  flex-direction: column;
+  margin: 9px;
+  padding: 9px;
+}
+
+.container-body-left .contact-form-container .form-area textarea {
+  border: none;
+  border-bottom: 1px solid #ffffff;
+  width: 100%;
+  color: #ffffff;
+  padding: 14px;
+  font-size: 1.6em;
+  outline: none;
+  background-color: transparent;
+  margin-bottom: 4%;
+}
+
+.container-body-left .contact-form-container .form-area .black-btn {
+  width: 23%;
+}
+
+.container-body-right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 footer {
   background-color: #151515;
   color: #ffffff;
   height: 400px;
+  position: relative;
+  bottom: -77px;
 }
 
 footer .footer-container-sm {
@@ -267,10 +423,6 @@ footer .footer-container-lg .bottom-footer .policy-one {
   justify-content: space-around;
 }
 
-footer {
-  display: none;
-}
-
 @media only screen and (min-width: 360px) and (max-width: 665px) {
   header {
     padding: 17px;
@@ -298,6 +450,58 @@ footer {
   header .mobile-header .mobile-menu {
     width: 28px;
     margin-right: 21px;
+  }
+  .container {
+    margin-top: 90px;
+    margin-left: 9%;
+  }
+  .container-top h3 {
+    font-size: 3.2em;
+  }
+  .container-top p {
+    font-size: 1.7em;
+  }
+  .container-body {
+    grid-template: 1fr / 1fr;
+  }
+  .container-body-left {
+    display: block;
+  }
+  .container-body-left .block {
+    display: block;
+    padding-top: 0;
+    margin-bottom: 10%;
+    margin-left: 0;
+  }
+  .container-body-left .block-1 {
+    flex-basis: 100%;
+    flex-direction: column;
+  }
+  .container-body-left .block-1-1 .social-icons {
+    width: 50%;
+  }
+  .container-body-left .contact-form {
+    left: 0%;
+    height: 100%;
+    width: 110%;
+    margin-left: -10%;
+    margin-bottom: -20%;
+  }
+  .container-body-left .contact-form-container .form-group {
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+  }
+  .container-body-left .contact-form-container .form-group input {
+    width: 90%;
+    margin: 12px 19px;
+    padding: 16px;
+  }
+  .container-body-left .contact-form-container .form-area .black-btn {
+    width: 100%;
+  }
+  .container-body-right {
+    display: none;
   }
   footer .footer-container-lg,
   footer .border {

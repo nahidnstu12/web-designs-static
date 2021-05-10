@@ -51,6 +51,22 @@ body {
   font-size: 10px;
 }
 
+.black-btn {
+  font-family: "Novera-bold";
+  font-size: 1.4em;
+  padding: 13px;
+  border: 1px solid #151515;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.black-btn {
+  width: 100%;
+  background-color: #151515;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+}
+
 a {
   color: #ffffff;
   text-decoration: none;
@@ -121,8 +137,95 @@ header .mobile-header {
   display: none;
 }
 
-section {
-  margin: 150px;
+.container {
+  margin-top: 190px;
+  margin-bottom: 7%;
+  margin-left: 16%;
+}
+
+.container-top {
+  margin-bottom: 50px;
+}
+
+.container-top h3 {
+  font-family: "Roxbrough-light";
+  font-size: 5.6em;
+}
+
+.container-top p {
+  font-family: "Novera-regular";
+  font-size: 1.5em;
+  color: #919191;
+  padding-right: 60%;
+  margin-top: 30px;
+}
+
+.container-body {
+  display: grid;
+  grid-template: repeat(2, 1fr)/repeat(3, 1fr);
+  grid-gap: 3.5em;
+  margin-right: 150px;
+  margin-bottom: 5%;
+}
+
+.container-body-service {
+  padding: 10px 0;
+}
+
+.container-body-service h3 {
+  font-family: "Novera-medium";
+  font-size: 1.9em;
+}
+
+.container-body-service p {
+  font-family: "Novera-regular";
+  font-size: 1.5em;
+  color: #919191;
+  margin-top: 22px;
+}
+
+.container-bottom {
+  margin-top: 50px;
+  margin-left: 12%;
+  margin-right: 0;
+  position: relative;
+}
+
+.container-bottom img {
+  width: 100%;
+}
+
+.container-bottom .info {
+  position: absolute;
+  top: 9%;
+  left: -15%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 40%;
+  height: 82%;
+  background-color: #151515;
+  color: #ffffff;
+  padding-left: 10%;
+}
+
+.container-bottom .info h5 {
+  font-family: "Novera-medium";
+  font-size: 1.4em;
+  text-align: left;
+  border-bottom: 1px solid #ffffff;
+  padding-bottom: 27px;
+}
+
+.container-bottom .info h3 {
+  font-family: "Roxbrough-light";
+  font-size: 5.6em;
+  padding: 25px 0;
+}
+
+.container-bottom .info .black-btn {
+  width: 70%;
 }
 
 footer {
@@ -267,10 +370,6 @@ footer .footer-container-lg .bottom-footer .policy-one {
   justify-content: space-around;
 }
 
-footer {
-  display: none;
-}
-
 @media only screen and (min-width: 360px) and (max-width: 665px) {
   header {
     padding: 17px;
@@ -298,6 +397,47 @@ footer {
   header .mobile-header .mobile-menu {
     width: 28px;
     margin-right: 21px;
+  }
+  .container {
+    margin-top: 90px;
+    margin-left: 6%;
+  }
+  .container-top h3 {
+    font-size: 3.2em;
+  }
+  .container-top p {
+    font-size: 1.7em;
+    padding-right: 4%;
+  }
+  .container-body {
+    grid-template: repeat(6, 1fr)/1fr;
+    grid-gap: 2em;
+    margin-right: 6%;
+  }
+  .container-body h3 {
+    font-size: 1.7em;
+  }
+  .container-body p {
+    font-size: 1.7em;
+  }
+  .container-bottom {
+    margin: 0;
+    margin-left: -6%;
+  }
+  .container-bottom img {
+    height: 677px;
+    object-fit: cover;
+  }
+  .container-bottom .info {
+    left: 5%;
+    width: 90%;
+    height: 65%;
+    top: 18%;
+    align-items: center;
+    padding-left: 0;
+  }
+  .container-bottom .info h3 {
+    font-size: 3.2em;
   }
   footer .footer-container-lg,
   footer .border {
