@@ -1,0 +1,569 @@
+@import '../fonts';
+
+// colors
+$color-1: #ffffff;
+$color-2: #e9e9e9;
+$color-3: #919191;
+$color-4: #747474;
+$color-5: #383838;
+$color-6: #151515;
+$color-7: #0d0d0d;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: $color-7;
+  background-color: $color-1;
+  width: 100%;
+  font-size: 10px; //font-size overrides as em unit
+}
+// mixins
+@mixin display-flex($justify: center, $align: center) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+@mixin font-style($font: 'Novera-regular', $size: 1.4em) {
+  font-family: $font;
+  font-size: $size;
+}
+%button {
+  @include font-style($font: 'Novera-bold');
+  padding: 13px;
+  border: 1px solid $color-6;
+  // margin-left: -5%;
+
+  margin-top: 20px;
+
+  font-weight: bold;
+}
+.white-btn {
+  @extend %button;
+  width: 100%;
+  background-color: $color-1;
+  color: $color-6;
+}
+.black-btn {
+  @extend %button;
+  width: 100%;
+  background-color: $color-6;
+  color: $color-1;
+  border: 1px solid $color-1;
+}
+// header design
+a {
+  color: $color-1;
+  text-decoration: none;
+  font-size: 1.4em;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 99;
+  .top-header {
+    background: $color-7;
+    // position: fixed;
+    color: $color-1;
+    height: 2.5rem;
+    font-family: 'Novera-medium';
+    @include display-flex($justify: space-around);
+    .left-section {
+      @include display-flex($justify: space-between);
+
+      flex-basis: 28%;
+      font-size: 1.5em;
+      .social-logo {
+        img {
+          width: 20px;
+          margin: 5px;
+          &:first-child {
+            width: 9px;
+          }
+        }
+      }
+    }
+  }
+  .bottom-header {
+    @include display-flex($justify: space-around);
+    height: 83px;
+    padding-left: 55px;
+    border-bottom: 1px solid $color-2;
+    font-family: 'Novera-medium';
+    background: $color-1;
+    .logo img {
+      width: 85px;
+    }
+    .nav-links {
+      display: flex;
+      justify-content: space-around;
+      flex-basis: 40%;
+      a {
+        color: $color-7;
+        font-size: 1.8em;
+      }
+    }
+  }
+  .mobile-header {
+    display: none;
+  }
+}
+
+.container {
+  margin-top: 190px;
+  margin-left: 16%;
+  // margin-bottom: 7%;
+  &-top {
+    margin-bottom: 5%;
+    h3 {
+      @include font-style($font: 'Roxbrough-light', $size: 5.6em);
+    }
+    p {
+      @include font-style($size: 2.8em);
+      color: $color-3;
+    }
+  }
+  &-body {
+    display: grid;
+    grid-template: 130% / repeat(2, 1fr);
+    &-left {
+      // position: relative;
+      display: flex;
+      flex-direction: column;
+      // justify-content: space-around;
+      .block {
+        @include display-flex($justify: space-evenly,$align:null);
+        flex-direction: column;
+        // display: flex;
+        margin-bottom: 20%;
+        padding-top: 10%;
+        margin-left: 20%;
+        &-1 {
+          display: flex;
+          // flex-direction: column;
+          &-1 {
+            padding: 21px 0;
+            margin-right: 10%;
+            width: 100%;
+            p {
+              @include font-style($font: 'Novera-medium', $size: 1.4em);
+              color: $color-3;
+              padding-bottom: 9px;
+            }
+            h4 {
+              @include font-style($font: 'Novera-xbold', $size: 2.2em);
+            }
+            .text-one {
+              font-family: 'Novera-regular';
+              font-size: 1.9em;
+            }
+            .direction {
+              @include font-style($font: 'Novera-bold', $size: 1.4em);
+              text-decoration: underline;
+              padding-top: 19px;
+            }
+            .social-icons {
+              display: flex;
+              justify-content: space-between;
+            }
+          }
+        }
+      }
+      .contact-form {
+        width: 100%;
+        height: 35%;
+        color: $color-1;
+        background-color: $color-6;
+        padding: 4%;
+        position: relative;
+        left: 16%;
+        font-family: 'Novera-regular';
+      
+        &-container {
+        
+          .form-group {
+            display: flex;
+            margin: 9px;
+            justify-content: space-evenly;
+            padding: 8px;
+            input {
+              border: none;
+              border-bottom: 1px solid $color-1;
+              width: 46%;
+              padding: 14px;
+              font-size: 16px;
+              outline: none;
+              background-color: transparent;
+              color: $color-1;
+            }
+          }
+          .form-area {
+            // margin-left: 5%;
+            // margin-right: 5%;
+            display: flex;
+            flex-direction: column;
+            margin: 9px;
+            padding: 9px;
+            textarea {
+              border: none;
+              border-bottom: 1px solid $color-1;
+              width: 100%;
+              color: $color-1;
+              padding: 14px;
+              font-size: 1.6em;
+              outline: none;
+              background-color: transparent;
+              margin-bottom: 4%;
+            }
+            .black-btn {
+              width: 23%;
+              // margin-left: 12%;
+            }
+          }
+        }
+      }
+    }
+    &-right {
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+footer {
+  background-color: $color-6;
+  color: $color-1;
+  height: 400px;
+  position: relative;
+  bottom: -77px;
+  .footer-container-sm {
+    display: none;
+  }
+  .footer-container-lg {
+    padding: 4% 0;
+    .top-footer {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      margin: 5px 17%;
+      margin-top: 0;
+      .footer-logo {
+        font-family: 'Novera-regular';
+        font-size: 1.4em;
+        color: $color-1;
+        img {
+          display: block;
+          margin-bottom: 19px;
+        }
+      }
+      .grid-two {
+        font-size: 1.4em;
+        ul {
+          list-style: none;
+          li {
+            margin-bottom: 19px;
+            font-family: 'Novera-medium';
+          }
+          .items-1 {
+            font-family: 'Novera-medium';
+            font-size: 1.4em;
+            color: $color-1;
+          }
+          .items-2 {
+            color: $color-1;
+          }
+          .items-3 {
+            font-family: 'Novera-light';
+          }
+        }
+      }
+      .grid-three {
+        font-size: 1.4em;
+        ul {
+          list-style: none;
+          li {
+            margin-bottom: 21px;
+          }
+          .items-1 {
+            font-family: 'Novera-medium';
+            //   font-size: 14px;
+            color: $color-1;
+          }
+
+          .items-3 {
+            font-family: 'Novera-regular';
+            span {
+              font-family: 'Novera-light';
+            }
+          }
+        }
+      }
+      .grid-four {
+        width: 184px;
+        h2 {
+          font-family: 'Novera-medium';
+          // font-size: 14px;
+          color: $color-1;
+          margin-bottom: 21px;
+        }
+        .social-icons {
+          display: flex;
+          justify-content: space-around;
+          margin-left: -13%;
+          // &:first-child {
+          //   // margin-left: -21px;
+          //   margin-left: -13%;
+          // }
+        }
+        .book-now {
+          padding: 10px;
+          border: 1px solid $color-1;
+          margin-left: 0%;
+          margin-right: 9%;
+          background-color: transparent;
+          width: 100%;
+          font-size: 1.3em;
+          font-weight: bold;
+          color: $color-1;
+          margin-top: 22%;
+        }
+      }
+    }
+    .border {
+      border-bottom: 1px solid $color-2;
+      width: 60%;
+      margin-left: 17%;
+    }
+    .bottom-footer {
+      margin: 3% 17%;
+      display: flex;
+      align-items: center;
+      p {
+        font-family: 'Novera-regular';
+        font-size: 1.5em;
+        //    margin-right: 8%;
+      }
+      .policy {
+        display: flex;
+        flex-basis: 100%;
+        justify-content: space-evenly;
+
+        &-one {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+        }
+      }
+    }
+  }
+}
+// footer{
+//   display: none;
+// }
+
+@media only screen and (min-width: 1680px) and (max-width: 1920px) {
+}
+
+@media only screen and (min-width: 360px) and (max-width: 665px) {
+  header {
+    // margin: 5px;
+    padding: 17px;
+    background-color: $color-1;
+    border-bottom: 1px solid #9191914a;
+    .top-header,
+    .bottom-header {
+      display: none;
+    }
+    .mobile-header {
+      @include display-flex($justify: space-between);
+
+      // padding: 7px;
+      .logo img {
+        width: 55px;
+        margin-left: 21px;
+      }
+      .contact {
+        font-size: 12px;
+        font-family: 'Novera-regular';
+        color: $color-3;
+      }
+      .mobile-menu {
+        width: 28px;
+        margin-right: 21px;
+      }
+    }
+  }
+  .container{
+    margin-top: 90px;
+    margin-left: 9%;
+    &-top{
+      h3{
+        font-size: 3.2em;
+      }
+      p{
+        font-size: 1.7em;
+      }
+    }
+    &-body{
+      grid-template: 1fr / 1fr;
+      &-left{
+        display: block;
+        .block{
+          display: block;
+          padding-top: 0;
+          margin-bottom: 10%;
+          margin-left: 0;
+          // flex-direction: column;
+          // align-items: flex-start;
+          // justify-content: flex-start;
+          &-1{
+            flex-basis: 100%;
+            flex-direction: column;
+            &-1{
+             .social-icons{
+               width: 50%;
+             }
+            }
+          }
+        }
+        .contact-form{
+          left: 0%;
+          height: 100%;
+          width: 110%;
+          margin-left: -10%;
+          margin-bottom: -20%;
+          // right: 4%;
+          &-container{
+            .form-group{
+              flex-direction: column;
+              padding: 0;
+              margin: 0;
+              input{
+                width: 90%;
+                margin: 12px 19px;
+                padding: 16px;
+              }
+
+            }
+            .form-area{
+              textarea{
+
+              }
+              .black-btn{
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+      &-right{
+        display: none;
+      }
+    }
+  }
+
+  footer {
+    .footer-container-lg,
+    .border {
+      display: none;
+    }
+    .footer-container-sm {
+      display: block;
+      background: #151515;
+      color: #ffffff;
+      padding: 19px 40px;
+      padding-top: 18%;
+      text-align: center;
+
+      .logo {
+        margin-top: 31px;
+        margin-bottom: 49px;
+      }
+      .head-title {
+        font-family: 'Novera-regular';
+        font-size: 1.2em;
+      }
+      .contact-1 {
+        font-family: 'Novera-medium';
+        font-size: 16px;
+        margin: 18px 0;
+        font-weight: bold;
+        // padding: 24px 0;
+      }
+      .contact-2 {
+        font-family: 'Novera-light';
+        font-size: 16px;
+        margin: 5px 0;
+        // padding: 24px 0;
+      }
+      .contact-3 {
+        font-family: 'Novera-light';
+        font-size: 16px;
+        margin: 18px 0;
+        margin-bottom: 49px;
+        // padding: 24px 0;
+      }
+      .book-now {
+        padding: 18px;
+        border: 1px solid $color-1;
+        margin-left: 0%;
+        margin-right: 9%;
+        background-color: transparent;
+        width: 100%;
+        font-size: 1.3em;
+        font-weight: bold;
+        color: $color-1;
+        margin-top: 14%;
+        margin-bottom: 14%;
+      }
+      .follow {
+        margin: 49px 0;
+      }
+      .social-icons {
+        display: flex;
+        justify-content: space-around;
+        // padding: 24px 0;
+        // width: 50%;
+        cursor: pointer;
+      }
+      .time {
+        font-family: 'Novera-medium';
+        font-size: 16px;
+        margin: 18px 0;
+        font-weight: bold;
+        // padding: 24px 0;
+        span {
+          font-family: 'Novera-regular';
+          font-weight: normal;
+        }
+      }
+      .policy {
+        display: flex;
+        &-one {
+          display: flex;
+          flex-direction: column;
+          margin-top: 2%;
+          margin-right: 38%;
+          a {
+            text-align: left;
+            font-family: 'Novera-medium';
+            padding: 7px 0;
+          }
+        }
+      }
+      .copyright {
+        font-family: 'Novera-regular';
+        font-size: 16px;
+        margin: 5px 0;
+        margin-top: 36px;
+      }
+    }
+  }
+}
