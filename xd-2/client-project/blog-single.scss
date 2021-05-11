@@ -27,7 +27,7 @@ body {
   justify-content: $justify;
   align-items: $align;
 }
-@mixin font-style($font:'Novera-regular',$size:1.4em) {
+@mixin font-style($font: 'Novera-regular', $size: 1.4em) {
   font-family: $font;
   font-size: $size;
 }
@@ -41,18 +41,25 @@ body {
 
   font-weight: bold;
 }
-.text-one{
+.white-btn {
   @extend %button;
-  @include font-style($font:'Novera-regular',$size:1.9em );
-  border: none;
-  padding: 5px;
-  color: $color-3;
-  text-decoration: underline;
-  background-color: transparent;
-  font-weight: normal;
+  width: 100%;
+  background-color: $color-1;
+  color: $color-6;
 }
-
-
+.black-btn {
+  @extend %button;
+  width: 100%;
+  background-color: $color-6;
+  color: $color-1;
+  border: 1px solid $color-1;
+}
+h3 {
+  @include font-style($font: 'Novera-medium', $size: 1.5em);
+}
+p {
+  @include font-style($size: 1.7em);
+}
 // header design
 a {
   color: $color-1;
@@ -112,46 +119,107 @@ header {
     display: none;
   }
 }
-
-.container{
-  margin: 150px;
-  &-top{
+.container {
+  margin: 150px 15%;
+}
+.headline {
+  //   margin: 150px 15%;
+  h3 {
+    @include font-style($font: 'Roxbrough-light', $size: 5.6em);
+  }
+  .subtitle {
+    display: flex;
+    margin-top: 3%;
     margin-bottom: 7%;
-    margin-left: 10%;
-    h3{
-      @include font-style($font:'Roxbrough-light',$size:5.6em);
-    }
-    p{
-      @include font-style($size:1.5em);
-      margin-top: 10px;
-      color: $color-3;
+    
+    p {
+      @include font-style($size: 1.5em);
+      padding-right: 5%;
+      &:last-child {
+        color: $color-3;
+      }
     }
   }
-  &-body{
-    margin-left: 22%;
+  img {
+    margin: 0;
+    margin-left: -22%;
     margin-top: 5%;
-    &-question{
-      margin-bottom: 6%;
-      h3{
-        @include font-style($font:'Novera-xbold',$size:3.2em);
-        margin-bottom: 25px;
+    width: 144%;
+    height: 100%;
+  }
+}
+.blog-body {
+  margin-top: 150px;
+  p{
+    @include font-style($font: 'Novera-regular', $size: 1.5em);
+    color: $color-3;
+  }
+//   .text-one {
+    
+//   }
+  .text {
+   
+    padding: 3% 0;
+  }
+  img {
+    width: 100%;
+    height: 100%;
+    margin: 4% 0;
+  }
+  h3 {
+    @include font-style($font: 'Novera-medium', $size: 1.9em);
+  }
+  .controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &-page {
+      h3 {
+        @include font-style($font: 'Novera-medium', $size: 1.9em);
+        p {
+          font-size: 1.4em;
+        }
       }
-      .faq-body{
-        
-        .ans{
-          display: none;
-          // overflow: hidden;
-          p{
-            @include font-style($size:1.5em);
-            margin-bottom: 9px;
-            margin-top: 9px;
-            color: $color-3;
+    }
+  }
+}
+
+.related-read {
+  margin-top: 150px;
+  h3 {
+    @include font-style($font: 'Roxbrough-light', $size: 3.2em);
+    // margin: auto;
+    // padding: 0 10%;
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+  .blog-lists-mobile{
+    display: none;
+  }
+  
+    .blog-lists-desktop {
+        display: grid;
+        grid-template: 1fr / repeat(3,1fr);
+        grid-gap: 2em;
+        .blog {
+      img {
+        width: 100%;
+        // height: 100%;
+      }
+      &-description {
+        margin: 4% 0;
+        h4 {
+          @include font-style($font: 'Novera-bold', $size: 1.9em);
+        }
+        .subtitle {
+           margin-top: 5%;
+          h5 {
+            @include font-style($font: 'Novera-regular', $size: 1.5em);
+            text-align: left;
           }
-          a{
-            color: $color-6;
-            @include font-style($font:'Novera-bold',$size:1.4em);
-            margin: 5px 0;
-            text-decoration: underline;
+          p {
+            @include font-style($font: 'Novera-regular', $size: 1.5em);
           }
         }
       }
@@ -285,6 +353,7 @@ footer {
   }
 }
 
+
 @media only screen and (min-width: 1680px) and (max-width: 1920px) {
 }
 
@@ -294,7 +363,6 @@ footer {
     padding: 17px;
     background-color: $color-1;
     border-bottom: 1px solid #9191914a;
-
     .top-header,
     .bottom-header {
       display: none;
@@ -318,44 +386,77 @@ footer {
       }
     }
   }
-
   .container{
-    margin: 100px 5% 100px 3%;
-    &-top{
-      margin-left: 3%;
-      // margin-bottom: 12%;
+      margin: 90px 5%;
+  }
+  .headline{
       h3{
-        @include font-style($font:'Roxbrough-light',$size:3.2em);
+          font-size: 3.2em;
       }
+      .subtitle{
+          flex-direction: column;
+      }
+      img{
+        width: 110%;
+        margin-left: -5%;
+      }
+  }
+
+  .blog-body{
+    margin-top: 50px;
       p{
-        @include font-style($size:1.7em);
-        margin-top: 25px;
-        padding-right: 5%;
+          font-size: 1.7em;
       }
-    }
-    &-body{
-      margin-left: 3%;
-      &-question{
-        margin-bottom: 6%;
-        margin-top: 9%;
-        h3{
-          @include font-style($font:'Novera-bold',$size:1.9em);
-          margin-bottom: 11px;
-        }
-        .faq-body{
-          .text-one{
-            font-size: 1.7em;
-          }
-          .ans{
-            padding: 14px 0;
-            p{
-              font-size: 1.7em;
-              padding-right: 3%;
-            }
-          }
-        }
+      img{
+          margin-bottom: 50px;
       }
-    }
+      .controls{
+          margin-top: 10%;
+          &-page{
+              h3{
+                  font-family: 'Novera-regular';
+                  font-size: 1.4em;
+              }
+              p{
+                  display: none;
+              }
+          }
+      }
+  }
+
+  .related-read{
+      margin-top: 50px;
+      margin-bottom: -9%;
+      h3{
+          text-align: left;
+      }
+      .blog-lists-desktop{
+          display: none;
+      }
+      .blog-lists-mobile{
+        //  display: grid;
+display: block;
+          .blog{
+              display: flex;
+              justify-content: space-around;
+              margin-bottom: 6%;
+              img{
+                width: 30%;
+              }
+              &-description{
+                 margin-left: 5%;
+                  h4{
+                    @include font-style($font:'Novera-regular', $size:1.5em );
+                    padding-bottom: 3%;
+                    line-height: 30px;
+                  }
+                  p{
+                    @include font-style($font:'Novera-regular', $size:1.5em );
+                    color: $color-3;
+                  }
+              }
+          }
+      }
   }
 
   footer {

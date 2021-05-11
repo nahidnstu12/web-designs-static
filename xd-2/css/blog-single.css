@@ -73,6 +73,16 @@ body {
   border: 1px solid #ffffff;
 }
 
+h3 {
+  font-family: "Novera-medium";
+  font-size: 1.5em;
+}
+
+p {
+  font-family: "Novera-regular";
+  font-size: 1.7em;
+}
+
 a {
   color: #ffffff;
   text-decoration: none;
@@ -143,281 +153,127 @@ header .mobile-header {
   display: none;
 }
 
-.hero {
-  position: relative;
+.container {
+  margin: 150px 15%;
 }
 
-.hero img {
-  width: 100%;
-}
-
-.hero .info {
-  position: absolute;
-  bottom: 0%;
-  left: 0%;
-  color: #ffffff;
-  background: linear-gradient(to top, black, transparent);
-  width: 100%;
-  padding-bottom: 9%;
-}
-
-.hero .info h3 {
-  font-family: "Roxbrough-light";
-  font-size: 7.2em;
-  padding-left: 17%;
-}
-
-.car-details-desktop {
-  display: grid;
-  grid-template: 1fr / 1fr 1fr;
-}
-
-.car-details-desktop .left-img .img-list {
-  display: grid;
-  grid-template: 1fr 0.5fr / 1fr 1fr;
-  grid-gap: 3em;
-}
-
-.car-details-desktop .left-img .img-list img {
-  width: 100%;
-}
-
-.car-details-desktop .left-img .img-list .first-img {
-  grid-column: 1/3;
-  position: relative;
-  top: -100px;
-  margin-bottom: -10%;
-}
-
-.car-details-desktop .left-img .controls {
-  margin-top: 5%;
-  margin-left: 55%;
-  display: flex;
-}
-
-.car-details-desktop .left-img .controls img {
-  width: 20px;
-}
-
-.car-details-desktop .left-img .controls .forward {
-  transform: rotate(-180deg);
-  margin-left: 10%;
-}
-
-.car-details-desktop .right-info {
-  padding-left: 12%;
-  padding-top: 8%;
-  padding-right: 8%;
-}
-
-.car-details-desktop .right-info h3 {
-  font-family: "Roxbrough-light";
-  font-size: 5.6em;
-  padding-bottom: 9%;
-}
-
-.car-details-desktop .right-info p {
-  font-family: "Novera-regular";
-  font-size: 1.4em;
-  line-height: 1.7;
-  padding-right: 19%;
-  padding-bottom: 9%;
-  color: #919191;
-}
-
-.car-details-desktop .right-info .car-spec {
-  width: 75%;
-}
-
-.car-details-desktop .right-info .car-spec .car-descript {
-  display: flex;
-  padding: 9% 0;
-}
-
-.car-details-desktop .right-info .car-spec .car-descript p {
-  font-family: "Novera-regular";
-  font-size: 1.4em;
-  color: #919191;
-  border-top: 1px solid #919191;
-  padding-top: 4%;
-}
-
-.car-details-desktop .right-info .car-spec .text-1 {
-  font-family: "Novera-bold";
-  font-size: 1.9em;
-  margin-bottom: -3%;
-}
-
-.car-details-desktop .right-info .car-spec .car-text {
-  display: flex;
-}
-
-.car-details-desktop .right-info .car-spec .car-text p {
-  font-family: "Novera-regular";
-  font-size: 1.4em;
-  color: #919191;
-  border-top: 1px solid #919191;
-  padding-top: 4%;
-}
-
-.car-details-desktop .right-info .car-spec .black-btn {
-  margin-top: 9%;
-  width: 100%;
-}
-
-.car-details-mobile {
-  display: none;
-}
-
-.car-info h3 {
-  font-family: "Roxbrough-light";
-  font-size: 5.6em;
-  padding: 10% 0;
-  text-align: center;
-}
-
-.car-info img {
-  width: 100%;
-}
-
-.car-info .car-specials {
-  padding: 10% 30%;
-}
-
-.car-info .car-specials .info {
-  display: flex;
-  justify-content: space-around;
-}
-
-.car-info .car-specials .info .text {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.car-info .car-specials .info .text p {
-  font-family: "Novera-medium";
-  font-size: 1.4em;
-  color: #919191;
-  padding-bottom: 14%;
-}
-
-.car-info .car-specials .info .text h4 {
-  font-family: "Novera-xbold";
-  font-size: 1.9em;
-}
-
-.car-info-section {
-  margin-left: 16%;
-  overflow: hidden;
-}
-
-.car-info-section .info-container {
-  display: flex;
-  align-items: center;
-}
-
-.car-info-section .info-container h3 {
+.headline h3 {
   font-family: "Roxbrough-light";
   font-size: 5.6em;
 }
 
-.car-info-section .info-container img {
-  padding-left: 4%;
-}
-
-.car-info-section .controls {
+.headline .subtitle {
+  display: flex;
   margin-top: 3%;
-  margin-left: 32%;
-  margin-bottom: 15%;
-  display: flex;
+  margin-bottom: 7%;
 }
 
-.car-info-section .controls img {
-  width: 20px;
-}
-
-.car-info-section .controls .forward {
-  transform: rotate(-180deg);
-  margin-left: 10%;
-}
-
-.car-info-section-2 {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-left: 16%;
-}
-
-.car-info-section-2 .text h3 {
-  font-family: "Roxbrough-light";
-  font-size: 5.6em;
-  margin-bottom: 20%;
-}
-
-.car-info-section-2 .text .black-btn {
-  width: 65%;
-}
-
-.car-info-section-2 .img img {
-  width: 100%;
-}
-
-.car-info-section-3 {
-  margin-top: 10%;
-  background-color: #151515;
-  color: #ffffff;
-  display: flex;
-  align-items: center;
-  padding-left: 16%;
-  justify-content: space-around;
-}
-
-.car-info-section-3 .text p {
+.headline .subtitle p {
   font-family: "Novera-regular";
-  font-size: 1.4em;
-}
-
-.car-info-section-3 .text h3 {
-  font-family: "Roxbrough-light";
-  font-size: 5.6em;
-}
-
-.car-info-section-3 .img-list {
-  display: flex;
-  padding-top: 5%;
-}
-
-.car-info-section-3 .img-list .img-text {
+  font-size: 1.5em;
   padding-right: 5%;
 }
 
-.car-info-section-3 .img-list .img-text img {
+.headline .subtitle p:last-child {
+  color: #919191;
+}
+
+.headline img {
+  margin: 0;
+  margin-left: -22%;
+  margin-top: 5%;
+  width: 144%;
+  height: 100%;
+}
+
+.blog-body {
+  margin-top: 150px;
+}
+
+.blog-body p {
+  font-family: "Novera-regular";
+  font-size: 1.5em;
+  color: #919191;
+}
+
+.blog-body .text {
+  padding: 3% 0;
+}
+
+.blog-body img {
+  width: 100%;
+  height: 100%;
+  margin: 4% 0;
+}
+
+.blog-body h3 {
+  font-family: "Novera-medium";
+  font-size: 1.9em;
+}
+
+.blog-body .controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.blog-body .controls-page h3 {
+  font-family: "Novera-medium";
+  font-size: 1.9em;
+}
+
+.blog-body .controls-page h3 p {
+  font-size: 1.4em;
+}
+
+.related-read {
+  margin-top: 150px;
+}
+
+.related-read h3 {
+  font-family: "Roxbrough-light";
+  font-size: 3.2em;
+  text-align: center;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.related-read .blog-lists-mobile {
+  display: none;
+}
+
+.related-read .blog-lists-desktop {
+  display: grid;
+  grid-template: 1fr/repeat(3, 1fr);
+  grid-gap: 2em;
+}
+
+.related-read .blog-lists-desktop .blog img {
   width: 100%;
 }
 
-.car-info-section-3 .img-list .img-text .spec {
-  position: relative;
-  bottom: 17%;
-  padding: 5%;
-  background: linear-gradient(to bottom, transparent, black);
+.related-read .blog-lists-desktop .blog-description {
+  margin: 4% 0;
 }
 
-.car-info-section-3 .img-list .img-text .spec h3 {
+.related-read .blog-lists-desktop .blog-description h4 {
   font-family: "Novera-bold";
-  font-size: 2.3em;
+  font-size: 1.9em;
 }
 
-.car-info-section-3 .img-list .img-text .spec .info {
-  display: flex;
-  margin-top: 11px;
-  margin-bottom: 24px;
+.related-read .blog-lists-desktop .blog-description .subtitle {
+  margin-top: 5%;
 }
 
-.car-info-section-3 .img-list .img-text .spec .info .sub-info {
+.related-read .blog-lists-desktop .blog-description .subtitle h5 {
   font-family: "Novera-regular";
-  font-size: 1.4em;
-  padding-right: 9px;
+  font-size: 1.5em;
+  text-align: left;
+}
+
+.related-read .blog-lists-desktop .blog-description .subtitle p {
+  font-family: "Novera-regular";
+  font-size: 1.5em;
 }
 
 footer {
@@ -432,6 +288,7 @@ footer .footer-container-sm {
 
 footer .footer-container-lg {
   padding: 4% 0;
+  padding-bottom: 0;
 }
 
 footer .footer-container-lg .top-footer {
@@ -590,168 +447,72 @@ footer .footer-container-lg .bottom-footer .policy-one {
     width: 28px;
     margin-right: 21px;
   }
-  .hero img {
-    height: 300px;
-    object-fit: cover;
-    margin-bottom: 5%;
+  .container {
+    margin: 90px 5%;
   }
-  .hero .info {
-    position: relative;
-    background: none;
-  }
-  .hero .info h3 {
-    color: #151515;
+  .headline h3 {
     font-size: 3.2em;
-    padding-left: 8%;
   }
-  .hero .black-btn {
-    width: 80%;
-    margin-left: 8%;
-    margin-bottom: 9%;
-  }
-  .car-details-desktop {
-    display: none;
-  }
-  .car-details-mobile {
-    display: flex;
+  .headline .subtitle {
     flex-direction: column;
   }
-  .car-details-mobile h3 {
-    font-family: "Roxbrough-light";
-    font-size: 3.2em;
-    margin-top: 8%;
-    margin-bottom: 5%;
-    margin-left: 8%;
+  .headline img {
+    width: 110%;
+    margin-left: -5%;
   }
-  .car-details-mobile p {
-    font-family: "Novera-regular";
+  .blog-body {
+    margin-top: 50px;
+  }
+  .blog-body p {
     font-size: 1.7em;
-    line-height: 1.7;
-    padding-right: 19%;
-    padding-bottom: 9%;
-    color: #919191;
-    margin-left: 8%;
   }
-  .car-details-mobile .car-descript {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 8%;
+  .blog-body img {
+    margin-bottom: 50px;
   }
-  .car-details-mobile .car-descript p {
-    font-family: "Novera-regular";
-    font-size: 1.4em;
-    color: #919191;
-    padding-top: 4%;
-    padding-bottom: 2%;
-  }
-  .car-details-mobile .third-img {
-    width: 100%;
-  }
-  .car-details-mobile .text-1 {
-    font-family: "Novera-bold";
-    font-size: 1.9em;
-    text-align: center;
-    margin-left: -8%;
-  }
-  .car-details-mobile .car-text {
-    display: flex;
-    flex-direction: column;
-  }
-  .car-details-mobile .car-text p {
-    font-family: "Novera-regular";
-    font-size: 1.4em;
-    color: #919191;
-    padding-top: 3%;
-    padding-bottom: 2%;
-    text-align: center;
-  }
-  .car-details-mobile .black-btn {
-    margin-top: 9%;
-    width: 80%;
-    margin-left: 8%;
-  }
-  .car-info {
-    margin-top: 14%;
-  }
-  .car-info h3 {
-    font-size: 3.2em;
-    margin-bottom: 9%;
-    text-align: left;
-    margin-left: 8%;
-  }
-  .car-info .car-specials .info {
-    flex-direction: column;
-  }
-  .car-info .car-specials .info .text {
-    margin: 7% 0;
-  }
-  .car-info .car-specials .info .text h4 {
-    font-size: 1.7em;
-    margin-top: -10px;
-  }
-  .car-info-section {
-    margin-left: 8%;
+  .blog-body .controls {
     margin-top: 10%;
   }
-  .car-info-section .info-container {
-    flex-direction: column;
+  .blog-body .controls-page h3 {
+    font-family: 'Novera-regular';
+    font-size: 1.4em;
   }
-  .car-info-section .info-container h3 {
-    font-size: 3.2em;
-    order: 2;
-    margin-top: 5%;
-    padding-right: 8%;
-  }
-  .car-info-section .info-container img {
-    padding-right: 14%;
-    order: 1;
-  }
-  .car-info-section .controls,
-  .car-info-section .second-img {
+  .blog-body .controls-page p {
     display: none;
   }
-  .car-info-section-2 {
-    flex-direction: column;
-    margin-left: 8%;
-    margin-top: 19%;
-    align-items: flex-start;
+  .related-read {
+    margin-top: 50px;
+    margin-bottom: -9%;
   }
-  .car-info-section-2 .text {
-    width: 80%;
-    order: 2;
+  .related-read h3 {
+    text-align: left;
   }
-  .car-info-section-2 .text h3 {
-    font-size: 3.2em;
-  }
-  .car-info-section-2 .text .black-btn {
-    width: 100%;
-  }
-  .car-info-section-2 .img {
-    margin-left: -9%;
-    margin-bottom: 8%;
-  }
-  .car-info-section-3 {
-    flex-direction: column;
-    align-items: flex-start;
-    padding-top: 10%;
-  }
-  .car-info-section-3 .text {
-    padding-bottom: 9%;
-  }
-  .car-info-section-3 .text h3 {
-    font-size: 3.2em;
-    padding-bottom: 9%;
-    padding-top: 9%;
-  }
-  .car-info-section-3 .text .black-btn {
-    width: 100%;
-  }
-  .car-info-section-3 .img-list .second-img-text {
+  .related-read .blog-lists-desktop {
     display: none;
   }
-  .car-info-section-3 .img-list .img-text {
-    padding: 0;
-    margin-left: -19%;
+  .related-read .blog-lists-mobile {
+    display: block;
+  }
+  .related-read .blog-lists-mobile .blog {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 6%;
+  }
+  .related-read .blog-lists-mobile .blog img {
+    width: 30%;
+  }
+  .related-read .blog-lists-mobile .blog-description {
+    margin-left: 5%;
+  }
+  .related-read .blog-lists-mobile .blog-description h4 {
+    font-family: "Novera-regular";
+    font-size: 1.5em;
+    padding-bottom: 3%;
+    line-height: 30px;
+  }
+  .related-read .blog-lists-mobile .blog-description p {
+    font-family: "Novera-regular";
+    font-size: 1.5em;
+    color: #919191;
   }
   footer .footer-container-lg,
   footer .border {

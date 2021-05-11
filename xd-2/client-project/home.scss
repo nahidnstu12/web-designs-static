@@ -27,6 +27,33 @@ body {
   justify-content: $justify;
   align-items: $align;
 }
+@mixin font-style($font: 'Novera-regular', $size: 1.4em) {
+  font-family: $font;
+  font-size: $size;
+}
+%button {
+  @include font-style($font: 'Novera-bold');
+  padding: 13px;
+  border: 1px solid $color-6;
+  // margin-left: -5%;
+
+  margin-top: 20px;
+
+  font-weight: bold;
+}
+.white-btn {
+  @extend %button;
+  width: 100%;
+  background-color: $color-1;
+  color: $color-6;
+}
+.black-btn {
+  @extend %button;
+  width: 100%;
+  background-color: $color-6;
+  color: $color-1;
+  border: 1px solid $color-1;
+}
 // header design
 a {
   color: $color-1;
@@ -87,8 +114,339 @@ header {
   }
 }
 
-section{
-  margin: 150px;
+// section{
+//   margin: 150px;
+// }
+
+.container-top {
+  margin-top: 122px;
+  background-color: $color-6;
+  color: $color-1;
+  // height: 990px;
+  display: grid;
+  overflow: hidden;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1.56fr;
+
+  .container-left {
+    @include display-flex();
+    .info {
+      h3 {
+        @include font-style($font: 'Roxbrough-light', $size: 5.6em);
+      }
+      .text-1 {
+        padding: 12px;
+        border-bottom: 1px solid $color-2;
+        width: 38%;
+        margin-bottom: 25px;
+      }
+      p {
+        @include font-style($size: 1.5em);
+        margin: 20px 0 50px 0;
+      }
+      //  .white-btn{
+
+      //  }
+    }
+  }
+
+  .container-right {
+    margin-right: -2%;
+    img {
+      width: 100%;
+    }
+  }
+}
+.carousal {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  margin-left: 15%;
+  overflow-x: scroll;
+  scrollbar-width: none;
+  &-left {
+    p {
+      @include font-style($font: 'Novera-medium', $size: 1.2em);
+    }
+    h3 {
+      @include font-style($font: 'Roxbrough-light', $size: 5.6em);
+    }
+    .controls {
+      margin-top: 30%;
+      display: flex;
+
+      img {
+        width: 20px;
+      }
+      .forward {
+        transform: rotate(-180deg);
+        margin-left: 10%;
+      }
+    }
+  }
+  .carousal-img-list {
+    display: flex;
+    .img-info {
+      margin-left: 4%;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+      .info {
+        position: relative;
+        background: linear-gradient(to right, black, transparent);
+        bottom: 29%;
+        color: #fff;
+        padding: 17px;
+        h3 {
+          @include font-style($font: 'Novera-medium', $size: 1.9em);
+        }
+        .car-info {
+          display: flex;
+          // justify-content: space-between;
+          // margin: 5px;
+          margin-top: 11px;
+          margin-bottom: 24px;
+          .sub-info {
+            @include font-style;
+            padding-right: 9px;
+            // content: "•";
+          }
+        }
+      }
+    }
+  }
+}
+
+section.logo {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 12%;
+}
+
+.top-cars {
+  // display: flex;
+  margin-left: 12%;
+  &-info {
+    display: flex;
+    img {
+      width: 100%;
+      height: 700px;
+      object-fit: cover;
+      padding-bottom: 9%;
+    }
+    .info {
+      padding: 5%;
+      padding-left: 8%;
+      p {
+        @include font-style($font: 'Novera-medium', $size: 1.2em);
+        color: $color-3;
+      }
+      h3 {
+        @include font-style($font: 'ROxbrough-light', $size: 5.6em);
+        margin: 4% 0;
+      }
+      .text {
+        @include font-style($font: 'Novera-regular', $size: 1.5em);
+        padding-right: 10%;
+        padding-bottom: 10%;
+      }
+      .white-btn {
+        width: 30%;
+      }
+    }
+    .info-second {
+      padding: 0;
+      padding-top: 5%;
+
+      .text-list {
+        padding: 5%;
+        padding-top: 0;
+      }
+    }
+    .right-img {
+      padding-right: 13%;
+    }
+  }
+}
+
+.latest-news {
+  margin-top: 150px;
+  position: relative;
+
+  &-container {
+    display: grid;
+    grid-template: 1fr / 1fr 1fr;
+    .latest-news-left {
+      padding-left: 12%;
+      padding-right: 5%;
+      padding-top: 15%;
+      p {
+        @include font-style($font: 'Novera-medium', $size: 1.2em);
+        color: $color-3;
+      }
+      h3 {
+        @include font-style($font: 'Roxbrough-light', $size: 5.6em);
+        padding: 6% 0;
+      }
+      .text {
+        @include font-style($font: 'Novera-light', $size: 1.4em);
+        padding-bottom: 6%;
+        padding-right: 20%;
+      }
+      .white-btn {
+        width: 30%;
+      }
+    }
+
+    .latest-news-right {
+      img {
+        width: 100%;
+      }
+    }
+  }
+  &-block-2 {
+    width: 55%;
+    height: 37%;
+    padding: 2%;
+    background-color: $color-6;
+    color: $color-1;
+    position: absolute;
+    bottom: 12%;
+    left: 25%;
+
+    .block-2-container {
+      display: flex;
+      img {
+        width: 100%;
+        height: 35%;
+      }
+      .info {
+        margin-left: 5%;
+        h3 {
+          @include font-style($font: 'Roxbrough-light', $size: 5.6em);
+        }
+        p {
+          @include font-style($font: 'Novera-regular', $size: 1.9em);
+          margin-top: 6%;
+          margin-bottom: 7%;
+          // line-height: 2;
+        }
+        .black-btn {
+          width: 45%;
+        }
+      }
+    }
+  }
+  .background {
+    background-color: $color-6;
+    width: 100%;
+    height: 300px;
+    margin-top: 10%;
+  }
+}
+
+.touch {
+  margin-top: 0%;
+  margin-bottom: 20%;
+  position: relative;
+  &-container {
+    display: grid;
+    grid-template: 1fr/ 1fr 1fr;
+
+    .touch-left {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-left: 34%;
+
+      p {
+        @include font-style($font: 'Novera-medium', $size: 1.2em);
+        color: $color-3;
+      }
+      h3 {
+        @include font-style($font: 'Roxbrough-light', $size: 5.6em);
+        margin-top: 5%;
+        margin-bottom: 4%;
+      }
+      .text {
+        @include font-style($font: 'Novera-regular', $size: 1.5em);
+        padding-right: 45%;
+        line-height: 1.7;
+      }
+      h4 {
+        @include font-style($font: 'Novera-medium', $size: 1.5em);
+        margin-top: 5%;
+        margin-bottom: 3%;
+      }
+      .text-2 {
+        @include font-style($font: 'Novera-regular', $size: 1.5em);
+        color: $color-6;
+        margin-top: 3%;
+      }
+    }
+    .touch-right {
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  .contact-form {
+    width: 45%;
+    // height: 35%;
+    color: $color-1;
+    background-color: $color-6;
+    padding: 5% 7%;
+    position: absolute;
+    left: 41%;
+    top: 25%;
+    font-family: 'Novera-regular';
+
+    &-container {
+      // .form-group {
+      //   display: flex;
+      //   margin: 9px;
+      //   justify-content: space-evenly;
+      //   padding: 8px;
+      input {
+        border: none;
+        border-bottom: 1px solid $color-1;
+        width: 100%;
+        padding: 14px;
+        padding-top: 30px;
+        font-size: 16px;
+        outline: none;
+        background-color: transparent;
+        color: $color-1;
+      }
+      // }
+      // .form-area {
+      //   // margin-left: 5%;
+      //   // margin-right: 5%;
+      //   display: flex;
+      //   flex-direction: column;
+      //   margin: 9px;
+      //   padding: 9px;
+      textarea {
+        border: none;
+        border-bottom: 1px solid $color-1;
+        width: 100%;
+        color: $color-1;
+        padding: 14px;
+        padding-top: 30px;
+        font-size: 1.6em;
+        outline: none;
+        background-color: transparent;
+        margin-bottom: 4%;
+      }
+      .black-btn {
+        width: 40%;
+        // margin-left: 12%;
+      }
+      // }
+    }
+  }
 }
 
 footer {
@@ -99,7 +457,7 @@ footer {
     display: none;
   }
   .footer-container-lg {
-    padding: 4% 0;
+    padding-top: 4%;
     .top-footer {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -215,9 +573,9 @@ footer {
     }
   }
 }
-footer{
-  display: none;
-}
+// footer {
+//   display: none;
+// }
 
 @media only screen and (min-width: 1680px) and (max-width: 1920px) {
 }
@@ -228,7 +586,6 @@ footer{
     padding: 17px;
     background-color: $color-1;
     border-bottom: 1px solid #9191914a;
-
     .top-header,
     .bottom-header {
       display: none;
@@ -252,8 +609,207 @@ footer{
       }
     }
   }
+  .container-top {
+    grid-template: 1fr 1fr / 1fr;
+    margin-top: 68px;
+    .container-left {
+      padding-bottom: 5%;
+      h3 {
+        font-size: 3.2em;
+      }
+      p {
+        font-size: 1.7em;
+      }
+    }
+    .container-right {
+      grid-row: 1/3;
+    }
+  }
+
+  .carousal {
+    // overflow: hidden;
+    flex-direction: column;
+    margin-left: 0;
+    &-left {
+      padding: 7%;
+      .controls {
+        display: none;
+      }
+      p {
+        padding-bottom: 5%;
+        font-size: 1.4em;
+      }
+      h3 {
+        font-size: 3.2em;
+      }
+    }
+    .carousal-img-list {
+      overflow-x: scroll;
+      .img-info {
+        margin-left: 0;
+      }
+    }
+  }
+  section.logo {
+    overflow-x: scroll;
+    scrollbar-width: none;
+    // justify-content: space-around;
+    padding: 12%;
+    img {
+      width: 100%;
+      padding: 0 10%;
+    }
+  }
+  .top-cars {
+    margin-left: 0;
+    padding: 8%;
+
+    &-info {
+      flex-direction: column;
+      img {
+        order: 1;
+      }
+      .info {
+        padding: 0;
+        order: 2;
+        p {
+          font-size: 1.4em;
+        }
+        h3 {
+          font-size: 3.2em;
+        }
+        .text {
+          font-size: 1.7em;
+        }
+        .white-btn {
+          width: 100%;
+          margin-bottom: 15%;
+        }
+      }
+      .right-img {
+        padding-right: 0;
+      }
+    }
+  }
+
+  .latest-news {
+    background-color: $color-6;
+    color: $color-1;
+    margin-top: 170px;
+    &-container {
+      grid-template: 1fr 1fr/ 1fr;
+      .latest-news-left {
+        padding: 8%;
+        padding-top: 0;
+        margin-top: -20%;
+        p {
+          font-size: 1.7em;
+
+          color: $color-1;
+          padding-bottom: 15px;
+        }
+        .border {
+          border-bottom: 1px solid $color-3;
+          width: 15%;
+        }
+        h3 {
+          font-size: 3.2em;
+        }
+        .text {
+          padding-right: 0%;
+          font-size: 1.7em;
+        }
+        .white-btn {
+          background-color: $color-6;
+          color: $color-1;
+          width: 100%;
+          border: 1px solid $color-1;
+        }
+      }
+      .latest-news-right {
+        grid-row: 1/2;
+        padding: 8%;
+        position: relative;
+        top: -40%;
+      }
+    }
+    &-block-2 {
+      position: relative;
+      bottom: 100px;
+      left: 0;
+      width: 100%;
+      padding: 8%;
+      margin-bottom: -5%;
+      .block-2-container {
+        flex-direction: column;
+        .info {
+          margin-left: 0;
+          margin-top: 15%;
+          .black-btn {
+            width: 100%;
+            h3 {
+              font-size: 3.2em;
+            }
+            p {
+              font-size: 1.7em;
+            }
+          }
+        }
+      }
+    }
+    .background {
+      display: none;
+    }
+  }
+  .touch {
+    padding: 8%;
+    margin-top: 12%;
+    &-container {
+      grid-template: 1fr 1fr / 1fr;
+      .touch-left {
+        margin-left: 0;
+        h3 {
+          font-size: 3.2em;
+        }
+        .border {
+          border-bottom: 1px solid $color-3;
+          padding-bottom: 15px;
+          width: 15%;
+        }
+        .text {
+          padding-right: 5%;
+          padding-top: 5%;
+          padding-bottom: 10%;
+          font-size: 1.7em;
+        }
+        .text-2 {
+          margin-top: 5%;
+        }
+      }
+      .touch-right {
+        display: none;
+      }
+    }
+    .contact-form {
+      position: relative;
+      width: 119%;
+      left: 0;
+      top: -27em;
+      margin-left: -10%;
+      padding: 5% 10%;
+      padding-bottom: 20%;
+      &-container {
+        .black-btn {
+          margin-top: 8%;
+          width: 100%;
+        }
+      }
+    }
+  }
 
   footer {
+    margin-top: -100%;
+    padding-top: 7%;
     .footer-container-lg,
     .border {
       display: none;

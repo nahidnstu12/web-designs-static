@@ -51,6 +51,28 @@ body {
   font-size: 10px;
 }
 
+.white-btn, .black-btn {
+  font-family: "Novera-bold";
+  font-size: 1.4em;
+  padding: 13px;
+  border: 1px solid #151515;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.white-btn {
+  width: 100%;
+  background-color: #ffffff;
+  color: #151515;
+}
+
+.black-btn {
+  width: 100%;
+  background-color: #151515;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+}
+
 a {
   color: #ffffff;
   text-decoration: none;
@@ -121,8 +143,366 @@ header .mobile-header {
   display: none;
 }
 
-section {
-  margin: 150px;
+.container-top {
+  margin-top: 122px;
+  background-color: #151515;
+  color: #ffffff;
+  display: grid;
+  overflow: hidden;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1.56fr;
+}
+
+.container-top .container-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-top .container-left .info h3 {
+  font-family: "Roxbrough-light";
+  font-size: 5.6em;
+}
+
+.container-top .container-left .info .text-1 {
+  padding: 12px;
+  border-bottom: 1px solid #e9e9e9;
+  width: 38%;
+  margin-bottom: 25px;
+}
+
+.container-top .container-left .info p {
+  font-family: "Novera-regular";
+  font-size: 1.5em;
+  margin: 20px 0 50px 0;
+}
+
+.container-top .container-right {
+  margin-right: -2%;
+}
+
+.container-top .container-right img {
+  width: 100%;
+}
+
+.carousal {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  margin-left: 15%;
+  overflow-x: scroll;
+  scrollbar-width: none;
+}
+
+.carousal-left p {
+  font-family: "Novera-medium";
+  font-size: 1.2em;
+}
+
+.carousal-left h3 {
+  font-family: "Roxbrough-light";
+  font-size: 5.6em;
+}
+
+.carousal-left .controls {
+  margin-top: 30%;
+  display: flex;
+}
+
+.carousal-left .controls img {
+  width: 20px;
+}
+
+.carousal-left .controls .forward {
+  transform: rotate(-180deg);
+  margin-left: 10%;
+}
+
+.carousal .carousal-img-list {
+  display: flex;
+}
+
+.carousal .carousal-img-list .img-info {
+  margin-left: 4%;
+}
+
+.carousal .carousal-img-list .img-info img {
+  width: 100%;
+  height: 100%;
+}
+
+.carousal .carousal-img-list .img-info .info {
+  position: relative;
+  background: linear-gradient(to right, black, transparent);
+  bottom: 29%;
+  color: #fff;
+  padding: 17px;
+}
+
+.carousal .carousal-img-list .img-info .info h3 {
+  font-family: "Novera-medium";
+  font-size: 1.9em;
+}
+
+.carousal .carousal-img-list .img-info .info .car-info {
+  display: flex;
+  margin-top: 11px;
+  margin-bottom: 24px;
+}
+
+.carousal .carousal-img-list .img-info .info .car-info .sub-info {
+  font-family: "Novera-regular";
+  font-size: 1.4em;
+  padding-right: 9px;
+}
+
+section.logo {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 12%;
+}
+
+.top-cars {
+  margin-left: 12%;
+}
+
+.top-cars-info {
+  display: flex;
+}
+
+.top-cars-info img {
+  width: 100%;
+  height: 700px;
+  object-fit: cover;
+  padding-bottom: 9%;
+}
+
+.top-cars-info .info {
+  padding: 5%;
+  padding-left: 8%;
+}
+
+.top-cars-info .info p {
+  font-family: "Novera-medium";
+  font-size: 1.2em;
+  color: #919191;
+}
+
+.top-cars-info .info h3 {
+  font-family: "ROxbrough-light";
+  font-size: 5.6em;
+  margin: 4% 0;
+}
+
+.top-cars-info .info .text {
+  font-family: "Novera-regular";
+  font-size: 1.5em;
+  padding-right: 10%;
+  padding-bottom: 10%;
+}
+
+.top-cars-info .info .white-btn {
+  width: 30%;
+}
+
+.top-cars-info .info-second {
+  padding: 0;
+  padding-top: 5%;
+}
+
+.top-cars-info .info-second .text-list {
+  padding: 5%;
+  padding-top: 0;
+}
+
+.top-cars-info .right-img {
+  padding-right: 13%;
+}
+
+.latest-news {
+  margin-top: 150px;
+  position: relative;
+}
+
+.latest-news-container {
+  display: grid;
+  grid-template: 1fr / 1fr 1fr;
+}
+
+.latest-news-container .latest-news-left {
+  padding-left: 12%;
+  padding-right: 5%;
+  padding-top: 15%;
+}
+
+.latest-news-container .latest-news-left p {
+  font-family: "Novera-medium";
+  font-size: 1.2em;
+  color: #919191;
+}
+
+.latest-news-container .latest-news-left h3 {
+  font-family: "Roxbrough-light";
+  font-size: 5.6em;
+  padding: 6% 0;
+}
+
+.latest-news-container .latest-news-left .text {
+  font-family: "Novera-light";
+  font-size: 1.4em;
+  padding-bottom: 6%;
+  padding-right: 20%;
+}
+
+.latest-news-container .latest-news-left .white-btn {
+  width: 30%;
+}
+
+.latest-news-container .latest-news-right img {
+  width: 100%;
+}
+
+.latest-news-block-2 {
+  width: 55%;
+  height: 37%;
+  padding: 2%;
+  background-color: #151515;
+  color: #ffffff;
+  position: absolute;
+  bottom: 12%;
+  left: 25%;
+}
+
+.latest-news-block-2 .block-2-container {
+  display: flex;
+}
+
+.latest-news-block-2 .block-2-container img {
+  width: 100%;
+  height: 35%;
+}
+
+.latest-news-block-2 .block-2-container .info {
+  margin-left: 5%;
+}
+
+.latest-news-block-2 .block-2-container .info h3 {
+  font-family: "Roxbrough-light";
+  font-size: 5.6em;
+}
+
+.latest-news-block-2 .block-2-container .info p {
+  font-family: "Novera-regular";
+  font-size: 1.9em;
+  margin-top: 6%;
+  margin-bottom: 7%;
+}
+
+.latest-news-block-2 .block-2-container .info .black-btn {
+  width: 45%;
+}
+
+.latest-news .background {
+  background-color: #151515;
+  width: 100%;
+  height: 300px;
+  margin-top: 10%;
+}
+
+.touch {
+  margin-top: 0%;
+  margin-bottom: 20%;
+  position: relative;
+}
+
+.touch-container {
+  display: grid;
+  grid-template: 1fr/ 1fr 1fr;
+}
+
+.touch-container .touch-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 34%;
+}
+
+.touch-container .touch-left p {
+  font-family: "Novera-medium";
+  font-size: 1.2em;
+  color: #919191;
+}
+
+.touch-container .touch-left h3 {
+  font-family: "Roxbrough-light";
+  font-size: 5.6em;
+  margin-top: 5%;
+  margin-bottom: 4%;
+}
+
+.touch-container .touch-left .text {
+  font-family: "Novera-regular";
+  font-size: 1.5em;
+  padding-right: 45%;
+  line-height: 1.7;
+}
+
+.touch-container .touch-left h4 {
+  font-family: "Novera-medium";
+  font-size: 1.5em;
+  margin-top: 5%;
+  margin-bottom: 3%;
+}
+
+.touch-container .touch-left .text-2 {
+  font-family: "Novera-regular";
+  font-size: 1.5em;
+  color: #151515;
+  margin-top: 3%;
+}
+
+.touch-container .touch-right img {
+  width: 100%;
+}
+
+.touch .contact-form {
+  width: 45%;
+  color: #ffffff;
+  background-color: #151515;
+  padding: 5% 7%;
+  position: absolute;
+  left: 41%;
+  top: 25%;
+  font-family: 'Novera-regular';
+}
+
+.touch .contact-form-container input {
+  border: none;
+  border-bottom: 1px solid #ffffff;
+  width: 100%;
+  padding: 14px;
+  padding-top: 30px;
+  font-size: 16px;
+  outline: none;
+  background-color: transparent;
+  color: #ffffff;
+}
+
+.touch .contact-form-container textarea {
+  border: none;
+  border-bottom: 1px solid #ffffff;
+  width: 100%;
+  color: #ffffff;
+  padding: 14px;
+  padding-top: 30px;
+  font-size: 1.6em;
+  outline: none;
+  background-color: transparent;
+  margin-bottom: 4%;
+}
+
+.touch .contact-form-container .black-btn {
+  width: 40%;
 }
 
 footer {
@@ -136,7 +516,7 @@ footer .footer-container-sm {
 }
 
 footer .footer-container-lg {
-  padding: 4% 0;
+  padding-top: 4%;
 }
 
 footer .footer-container-lg .top-footer {
@@ -267,10 +647,6 @@ footer .footer-container-lg .bottom-footer .policy-one {
   justify-content: space-around;
 }
 
-footer {
-  display: none;
-}
-
 @media only screen and (min-width: 360px) and (max-width: 665px) {
   header {
     padding: 17px;
@@ -298,6 +674,199 @@ footer {
   header .mobile-header .mobile-menu {
     width: 28px;
     margin-right: 21px;
+  }
+  .container-top {
+    grid-template: 1fr 1fr / 1fr;
+    margin-top: 68px;
+  }
+  .container-top .container-left {
+    padding-bottom: 5%;
+  }
+  .container-top .container-left h3 {
+    font-size: 3.2em;
+  }
+  .container-top .container-left p {
+    font-size: 1.7em;
+  }
+  .container-top .container-right {
+    grid-row: 1/3;
+  }
+  .carousal {
+    flex-direction: column;
+    margin-left: 0;
+  }
+  .carousal-left {
+    padding: 7%;
+  }
+  .carousal-left .controls {
+    display: none;
+  }
+  .carousal-left p {
+    padding-bottom: 5%;
+    font-size: 1.4em;
+  }
+  .carousal-left h3 {
+    font-size: 3.2em;
+  }
+  .carousal .carousal-img-list {
+    overflow-x: scroll;
+  }
+  .carousal .carousal-img-list .img-info {
+    margin-left: 0;
+  }
+  section.logo {
+    overflow-x: scroll;
+    scrollbar-width: none;
+    padding: 12%;
+  }
+  section.logo img {
+    width: 100%;
+    padding: 0 10%;
+  }
+  .top-cars {
+    margin-left: 0;
+    padding: 8%;
+  }
+  .top-cars-info {
+    flex-direction: column;
+  }
+  .top-cars-info img {
+    order: 1;
+  }
+  .top-cars-info .info {
+    padding: 0;
+    order: 2;
+  }
+  .top-cars-info .info p {
+    font-size: 1.4em;
+  }
+  .top-cars-info .info h3 {
+    font-size: 3.2em;
+  }
+  .top-cars-info .info .text {
+    font-size: 1.7em;
+  }
+  .top-cars-info .info .white-btn {
+    width: 100%;
+    margin-bottom: 15%;
+  }
+  .top-cars-info .right-img {
+    padding-right: 0;
+  }
+  .latest-news {
+    background-color: #151515;
+    color: #ffffff;
+    margin-top: 170px;
+  }
+  .latest-news-container {
+    grid-template: 1fr 1fr/ 1fr;
+  }
+  .latest-news-container .latest-news-left {
+    padding: 8%;
+    padding-top: 0;
+    margin-top: -20%;
+  }
+  .latest-news-container .latest-news-left p {
+    font-size: 1.7em;
+    color: #ffffff;
+    padding-bottom: 15px;
+  }
+  .latest-news-container .latest-news-left .border {
+    border-bottom: 1px solid #919191;
+    width: 15%;
+  }
+  .latest-news-container .latest-news-left h3 {
+    font-size: 3.2em;
+  }
+  .latest-news-container .latest-news-left .text {
+    padding-right: 0%;
+    font-size: 1.7em;
+  }
+  .latest-news-container .latest-news-left .white-btn {
+    background-color: #151515;
+    color: #ffffff;
+    width: 100%;
+    border: 1px solid #ffffff;
+  }
+  .latest-news-container .latest-news-right {
+    grid-row: 1/2;
+    padding: 8%;
+    position: relative;
+    top: -40%;
+  }
+  .latest-news-block-2 {
+    position: relative;
+    bottom: 100px;
+    left: 0;
+    width: 100%;
+    padding: 8%;
+    margin-bottom: -5%;
+  }
+  .latest-news-block-2 .block-2-container {
+    flex-direction: column;
+  }
+  .latest-news-block-2 .block-2-container .info {
+    margin-left: 0;
+    margin-top: 15%;
+  }
+  .latest-news-block-2 .block-2-container .info .black-btn {
+    width: 100%;
+  }
+  .latest-news-block-2 .block-2-container .info .black-btn h3 {
+    font-size: 3.2em;
+  }
+  .latest-news-block-2 .block-2-container .info .black-btn p {
+    font-size: 1.7em;
+  }
+  .latest-news .background {
+    display: none;
+  }
+  .touch {
+    padding: 8%;
+    margin-top: 12%;
+  }
+  .touch-container {
+    grid-template: 1fr 1fr / 1fr;
+  }
+  .touch-container .touch-left {
+    margin-left: 0;
+  }
+  .touch-container .touch-left h3 {
+    font-size: 3.2em;
+  }
+  .touch-container .touch-left .border {
+    border-bottom: 1px solid #919191;
+    padding-bottom: 15px;
+    width: 15%;
+  }
+  .touch-container .touch-left .text {
+    padding-right: 5%;
+    padding-top: 5%;
+    padding-bottom: 10%;
+    font-size: 1.7em;
+  }
+  .touch-container .touch-left .text-2 {
+    margin-top: 5%;
+  }
+  .touch-container .touch-right {
+    display: none;
+  }
+  .touch .contact-form {
+    position: relative;
+    width: 119%;
+    left: 0;
+    top: -27em;
+    margin-left: -10%;
+    padding: 5% 10%;
+    padding-bottom: 20%;
+  }
+  .touch .contact-form-container .black-btn {
+    margin-top: 8%;
+    width: 100%;
+  }
+  footer {
+    margin-top: -100%;
+    padding-top: 7%;
   }
   footer .footer-container-lg,
   footer .border {

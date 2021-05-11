@@ -209,6 +209,7 @@ footer .footer-container-sm {
 
 footer .footer-container-lg {
   padding: 4% 0;
+  padding-bottom: 0;
 }
 
 footer .footer-container-lg .top-footer {
